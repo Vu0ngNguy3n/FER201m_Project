@@ -1,6 +1,10 @@
+import Header from "../../components/header"
+
 function Login(){
     return(
-        <div>Login</div>
+        <div>
+            <Header/>
+        </div>
     )
 }
 export default Login

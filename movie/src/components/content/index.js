@@ -2,8 +2,8 @@ import './Content.scss'
 
 function Content(){
     return(
-        <div>
-
+        <div className='content'>
+            Content
         </div>
     )
 }
