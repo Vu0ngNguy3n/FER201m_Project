@@ -1,4 +1,5 @@
 import './Content.scss'
+import movies from "../../json/movie.json"
 
 function Content(){
     return(
@@ -7,4 +8,4 @@ function Content(){
         </div>
     )
 }
-export default Content
+export default Content;

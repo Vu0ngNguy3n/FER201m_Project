@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"name:": "Vua hải tặc",
+		"name": "Vua hải tặc",
 		"year": 2022,
 		"type": "Hoạt Hình",
 		"score": 7.65,
@@ -10,7 +10,7 @@
 	},
 	{
 		"id": 2,
-		"name:": "John Wick",
+		"name": "John Wick",
 		"year": 2020,
 		"type": "Hành động",
 		"score": 8.30,
@@ -19,7 +19,7 @@
 	},
 	{
 		"id": 3,
-		"name:": "Game of Thrones",
+		"name": "Game of Thrones",
 		"year": 2011,
 		"type": "Hành động",
 		"score": 8.65,
@@ -28,7 +28,7 @@
 	},
 	{
 		"id": 4,
-		"name:": "Naruto",
+		"name": "Naruto",
 		"year": 2019,
 		"type": "Hoạt Hình",
 		"score": 9.65,
@@ -37,7 +37,7 @@
 	},
 	{
 		"id": 5,
-		"name:": "Cuốn theo chiều gió",
+		"name": "Cuốn theo chiều gió",
 		"year": 2010,
 		"type": "Tình cảm",
 		"score": 9.20,
