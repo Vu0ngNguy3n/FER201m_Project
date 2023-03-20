@@ -3,8 +3,8 @@ import typeMovie from '../../json/type.json'
 
 function Sidebar(){
     return(
-        <div>
-
+        <div className='sidebar'>
+            Sidebar
         </div>
     )
 }

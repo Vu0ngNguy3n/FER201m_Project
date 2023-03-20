@@ -3,8 +3,8 @@ import movies from "../../json/movie.json"
 
 function Content(){
     return(
-        <div>
-
+        <div className='content'>
+            Content
         </div>
     )
 }
