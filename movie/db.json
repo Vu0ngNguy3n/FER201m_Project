@@ -1,0 +1,171 @@
+{
+  "account": [
+    {
+      "id": 1,
+      "name": "Ngô Tuấn Địch",
+      "email": "ngotuandich@gmail.com",
+      "password": "12345678",
+      "gender": "Nam"
+    },
+    {
+      "id": 2,
+      "name": "Phùng Địch Thủ",
+      "email": "phungdichthu@gmail.com",
+      "password": "12345678",
+      "gender": "Nam"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Anh Tuấn",
+      "email": "nguyenanhtuan@gmail.com",
+      "password": "12345678",
+      "gender": "Nam"
+    },
+    {
+      "id": 4,
+      "name": "Bách Thị Phương",
+      "email": "bachthiphuong@gmail.com",
+      "password": "12345678",
+      "gender": "Nữ"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "Vua hải tặc",
+      "year": 2022,
+      "type": "Hoạt Hình",
+      "score": 7.65,
+      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.",
+      "imageUrl": "https://static.tvtropes.org/pmwiki/pub/images/2e5c6d37_566f_4274_b62d_ebf5fcbd0722.png"
+    },
+    {
+      "id": 2,
+      "name": "John Wick",
+      "year": 2020,
+      "type": "Hành động",
+      "score": 8.3,
+      "description": "Sát thủ John Wick: Phần 3 – Chuẩn bị chiến tranh là một bộ phim hành động tội phạm Mỹ năm 2019, với sự tham gia diễn xuất của Keanu Reeves trong vai nhân vật chính trong phần ba của loạt phim Sát thủ John Wick, sau Sát thủ John Wick và Sát thủ John Wick: Phần 2.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Game of Thrones",
+      "year": 2011,
+      "type": "Hành động",
+      "score": 8.65,
+      "description": "Trò chơi vương quyền (tựa gốc tiếng Anh: Game of Thrones) là một loạt phim truyền hình giả tưởng của Mỹ được sáng lập bởi David Benioff và D. B. Weiss. Bộ phim chuyển thể dựa trên loạt tiểu thuyết giả tưởng A Song of Ice and Fire của tác giả George R. R. Martin, tập đầu tiên của tiểu thuyết có tên A Game of Thrones. Phim được quay tại Titanic Studios ở Belfast, và ở những nơi khác như Vương quốc Anh, Croatia, Iceland, Malta, Morocco, Tây Ban Nha, và Hoa Kỳ.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Naruto",
+      "year": 2019,
+      "type": "Hoạt Hình",
+      "score": 9.65,
+      "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cuốn theo chiều gió",
+      "year": 2010,
+      "type": "Tình cảm",
+      "score": 9.2,
+      "description": "Cuốn theo chiều gió, xuất bản lần đầu năm 1936, là một cuốn tiểu thuyết tình cảm của Margaret Mitchell, người đã giành giải Pulitzer với tác phẩm này năm 1937. Câu chuyện được đặt bối cảnh tại Georgia và Atlanta, miền Nam Hoa Kỳ trong suốt thời kì nội chiến và thời tái thiết.",
+      "imageUrl": "https://media1.nguoiduatin.vn/media/nguyen-minh-anh/2019/01/28/ndt14.jpg"
+    },
+    {
+      "id": 6
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "content": "Phim hay thật sự",
+      "user_id": 1,
+      "movie_id": 1,
+      "star": 9
+    },
+    {
+      "id": 2,
+      "content": "Phim dở ẹc",
+      "user_id": 1,
+      "movie_id": 2,
+      "star": 3
+    },
+    {
+      "id": 3,
+      "content": "Tạm được",
+      "user_id": 2,
+      "movie_id": 3,
+      "star": 6
+    },
+    {
+      "id": 4,
+      "content": "Đoạn đốt going merry cảm động quá :(",
+      "user_id": 3,
+      "movie_id": 1,
+      "star": 9.5
+    },
+    {
+      "id": 5,
+      "content": "Tàm tạm",
+      "user_id": 4,
+      "movie_id": 4,
+      "star": 7
+    },
+    {
+      "id": 6,
+      "content": "John chả biết gì cả",
+      "user_id": 3,
+      "movie_id": 3,
+      "star": 8.2
+    },
+    {
+      "id": 7,
+      "content": "Đúng là kiệt tác điện ảnh",
+      "user_id": 1,
+      "movie_id": 5,
+      "star": 9
+    },
+    {
+      "id": 8
+    },
+    {
+      "content": "Đúng là kiệt tác điện ảnh",
+      "user_id": 1,
+      "movie_id": 5,
+      "star": 9,
+      "id": 9
+    },
+    {
+      "content": "Đúng là kiệt tác điện ảnh",
+      "user_id": 1,
+      "movie_id": 5,
+      "star": 9,
+      "id": 10
+    },
+    {
+      "score": "10",
+      "content": "Truyện hay đấy",
+      "user_id": 1,
+      "movie_id": "1",
+      "id": 11
+    },
+    {
+      "content": "Anh em không nên xem",
+      "score": "9",
+      "user_id": 1,
+      "movie_id": "2",
+      "id": 12
+    }
+  ],
+  "type": [
+    "Hành động",
+    "Tình cảm",
+    "Kinh dị",
+    "Hoạt hình",
+    "Khoa học - Nghệ thuật"
+  ]
+}
