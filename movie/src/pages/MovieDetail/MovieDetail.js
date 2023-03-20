@@ -1,7 +1,9 @@
+import Details from "../../components/details"
+
 function MovieDetail(){
     return(
         <div>
-            MovieDetail
+            <Details />
         </div>
     )
 }
