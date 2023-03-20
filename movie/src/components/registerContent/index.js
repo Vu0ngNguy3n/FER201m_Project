@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useState } from "react";
 import "./RegisterContent.scss";
 import accounts from '../../json/account.json'
 
@@ -9,6 +9,8 @@ function RegisterContent() {
   const [gender, setGender] = useState("Male");
 
 
+ 
+
     const handleRegister = () => {
         const newId = accounts[accounts.length-1].id + 1;
         const newAccount = {
@@ -18,14 +20,19 @@ function RegisterContent() {
             password: password,
             gender: gender
         }
-        console.log(newAccount);
+        //  const fs = require("fs");
+        //  const data = JSON.parse(fs.readFileSync("account.json"));
+        //  data.newData = {newAccount}
+        //  const newDataJson = JSON.stringify(data)
+        //  console.log(newAccount);
     }
 
 
+
   return (
-    <div class="container">
+    <div class="container">qwe
       <div className="registerContent">
-        Gmail:
+        <label>Gmail:</label>
         <input
           onChange={(e) => setMail(e.target.value)}
           placeholder="Enter your gmail ..."
