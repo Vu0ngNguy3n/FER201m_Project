@@ -1,0 +1,20 @@
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    padding: 40px;
+    border: 1px solid palevioletred;
+    .input{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        margin: 8px;
+    }
+    .handle{
+        margin: 8px;
+    }
+    span{
+        margin: 8px;
+    }
+}

@@ -11,8 +11,8 @@ function Header() {
         <div className='right'>
             <input placeholder='Nhập tên cần tìm'/>
             <button>Tìm</button>
-            <p>Đăng nhập</p>
-            <p>Đăng kí</p>
+            <Link to='login'><p>Đăng nhập</p></Link>
+            <Link to='register'><p>Đăng kí</p></Link>
             <p>Đăng xuất</p>
         </div>
       </header>
