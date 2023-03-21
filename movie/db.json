@@ -27,6 +27,13 @@
       "email": "bachthiphuong@gmail.com",
       "password": "12345678",
       "gender": "Nữ"
+    },
+    {
+      "id": 5,
+      "name": "Vuong",
+      "email": "vuong",
+      "password": "12345678",
+      "gender": "Male"
     }
   ],
   "movies": [

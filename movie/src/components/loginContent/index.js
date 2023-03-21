@@ -8,15 +8,27 @@ import { Link } from "react-router-dom";
 function LoginContent() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
-  const { account, setAccount } = useContext(AccountContext);
+  const [listAccount, setListAccount] = useState([]);
   const [isUndifined, setIsUndifined] = useState(null);
+  const { account, setAccount } = useContext(AccountContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setAccount({});
+    fetch(`http://localhost:8000/account`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setListAccount(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    setAccount();
   }, []);
   const handleLogin = () => {
-    const account = accounts.find(
+    const account = listAccount.find(
       (a) => a.email === mail && a.password === password
     );
     if (account === undefined) {
@@ -54,7 +66,9 @@ function LoginContent() {
             />
           </div>
           {isUndifined === false ? (
-            <p style={{ color: "#f9004d", textAlign: "left", fontSize: '12px'}}>
+            <p
+              style={{ color: "#f9004d", textAlign: "left", fontSize: "12px" }}
+            >
               Incorrect Email or Password
             </p>
           ) : (

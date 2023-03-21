@@ -7,12 +7,13 @@ import { Button } from "bootstrap";
 function Header() {
   const { account, setAccount } = useContext(AccountContext);
   const [search, setSearch] = useState("");
+
   const searchRef = useRef();
 
   const clearSearch = () => {
-    setSearch('')
-    searchRef.current.focus()
-  }
+    setSearch("");
+    searchRef.current.focus();
+  };
 
   return (
     <div className="contain">
@@ -44,9 +45,9 @@ function Header() {
             style={{ textDecoration: "none" }}
             to="/login"
           >
-            <b>{account.id === undefined ? "Đăng nhập" : "Đăng xuất"}</b>
+            {!account ? <b>Đăng Nhập</b> : <b>Đăng Xuất</b>}
           </Link>
-          {account.id === undefined ? (
+          {!account ? (
             <Link
               className="action"
               style={{ textDecoration: "none" }}

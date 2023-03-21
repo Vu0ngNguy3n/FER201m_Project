@@ -1,23 +1,45 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./RegisterContent.scss";
-import accounts from "../../json/account.json";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AccountContext } from "../../App";
 
 function RegisterContent() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [gender, setGender] = useState("Male");
+  const [accounts, setAccounts] = useState([]);
+  const { setAccount } = useContext(AccountContext);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch(`http://localhost:8000/account`, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => setAccounts(data));
+  }, []);
 
   const handleRegister = () => {
-    const newId = accounts[accounts.length - 1].id + 1;
-    const newAccount = {
-      id: newId,
-      name: fullname,
-      email: mail,
-      password: password,
-      gender: gender,
-    };
+    if (mail !== "" && password !== "" && fullname !== "") {
+      const newId = accounts[accounts.length - 1].id + 1;
+      const newAccount = {
+        id: newId,
+        name: fullname,
+        email: mail,
+        password: password,
+        gender: gender,
+      };
+      fetch(`http://localhost:8000/account`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newAccount),
+      });
+      setAccount(newAccount);
+      navigate("/");
+    } else {
+    }
   };
 
   return (
@@ -37,7 +59,7 @@ function RegisterContent() {
             <input
               placeholder="Enter Your FullName "
               id="fullname"
-              onChange={(e) => setMail(e.target.value)}
+              onChange={(e) => setFullname(e.target.value)}
             />
           </div>
           <div className="input">
@@ -59,8 +81,8 @@ function RegisterContent() {
                 type={"radio"}
                 name="gender"
                 value="Male"
-                checked
-                onChange={(e) => setPassword(e.target.value)}
+                checked={gender === "Male" ? true : false}
+                onChange={(e) => setGender(e.target.value)}
               />
               <p>Male</p>{" "}
               <input
@@ -68,13 +90,14 @@ function RegisterContent() {
                 name="gender"
                 type={"radio"}
                 value="Female"
-                onChange={(e) => setPassword(e.target.value)}
+                checked={gender === "Female" ? true : false}
+                onChange={(e) => setGender(e.target.value)}
               />
               <p>Female</p>
             </div>
           </div>
           <div className="handle">
-            <button>Đăng ký</button>
+            <button onClick={handleRegister}>Đăng ký</button>
           </div>
           <div className="login">
             <b>Have an account?</b>
