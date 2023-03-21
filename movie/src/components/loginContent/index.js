@@ -57,7 +57,7 @@ function LoginContent() {
             <a className="remember">Quên mật khẩu</a>
           </div>
           <div className="register">
-            <span>Bạn chưa có tài khoản? </span>
+            <b>Bạn chưa có tài khoản? </b>
             <Link
               style={{ color: "#f9004d",textDecoration: 'none' }}
               className="signup"
