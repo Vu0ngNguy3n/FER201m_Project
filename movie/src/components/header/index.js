@@ -1,21 +1,37 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import { AccountContext } from "../../App";
 import { Button } from "bootstrap";
 
 function Header() {
   const { account, setAccount } = useContext(AccountContext);
+  const [search, setSearch] = useState("");
+  const searchRef = useRef();
+
+  const clearSearch = () => {
+    setSearch('')
+    searchRef.current.focus()
+  }
 
   return (
     <div className="contain">
       <div className="inner">
-        <Link className="logo" style={{ textDecoration: "none", color:'black' }} to="/">
+        <Link
+          className="logo"
+          style={{ textDecoration: "none", color: "black" }}
+          to="/"
+        >
           MY <span>FILM</span>
         </Link>
         <div className="search">
-          <input placeholder="Enter a Film ..." />
-          <button className="clear">
+          <input
+            onChange={(e) => setSearch(e.target.value)}
+            ref={searchRef}
+            value={search}
+            placeholder="Enter a Film ..."
+          />
+          <button className="clear" onClick={clearSearch}>
             <i class="fa-solid fa-circle-xmark"></i>
           </button>
           <button className="searchbtn">

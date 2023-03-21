@@ -9,6 +9,7 @@ function LoginContent() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const { account, setAccount } = useContext(AccountContext);
+  const [isUndifined, setIsUndifined] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,8 +19,8 @@ function LoginContent() {
     const account = accounts.find(
       (a) => a.email === mail && a.password === password
     );
-    if (account.length === 0) {
-      alert("No user");
+    if (account === undefined) {
+      setIsUndifined(false);
     } else {
       setAccount(account);
       navigate("/");
@@ -52,6 +53,13 @@ function LoginContent() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          {isUndifined === false ? (
+            <p style={{ color: "#f9004d", textAlign: "left", fontSize: '12px'}}>
+              Incorrect Email or Password
+            </p>
+          ) : (
+            ""
+          )}
           <div className="handle">
             <button onClick={handleLogin}>Đăng nhập</button>
             <a className="remember">Quên mật khẩu</a>
@@ -59,7 +67,7 @@ function LoginContent() {
           <div className="register">
             <b>Bạn chưa có tài khoản? </b>
             <Link
-              style={{ color: "#f9004d",textDecoration: 'none' }}
+              style={{ color: "#f9004d", textDecoration: "none" }}
               className="signup"
               to="/register"
             >

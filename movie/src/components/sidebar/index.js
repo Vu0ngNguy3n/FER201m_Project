@@ -8,13 +8,15 @@ function Sidebar(){
     const [category, setcategory] = useState(data);
 
     return(
-        <div className='sidebar'>
+        <div className='sideBar'>
+            <h2>Thể Loại</h2>
+            <hr/>
             <ul>
             {
                 category?.map((item, index) => (
-                    <Link key={index} to={`/category/${item.id}`}>
-                    <div className="category_items">
-                        <li>{item?.category}</li>
+                    <Link style={{textDecoration: 'none'}} key={index} to={`/category/${item.id}`}>
+                    <div className="categoryItems">
+                        <li><span>{item?.category}</span></li>
                     </div>
                 </Link>
                 ))
