@@ -4,24 +4,22 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import './Sidebar.scss';
 
-function Sidebar(){
+function Sidebar() {
     const [category, setcategory] = useState(data);
 
-    return(
+    return (
         <div className='sideBar'>
-            <h2>Thể Loại</h2>
-            <hr/>
-            <ul>
+                <h2>Thể Loại</h2>
+                <hr />
+
             {
                 category?.map((item, index) => (
-                    <Link style={{textDecoration: 'none'}} key={index} to={`/category/${item.id}`}>
                     <div className="categoryItems">
                         <li><span>{item?.category}</span></li>
                     </div>
-                </Link>
                 ))
             }
-            </ul>
+
         </div>
     )
 }

@@ -18,13 +18,16 @@
 
   .categoryItems {
     padding: 10px 4px;
+
     li {
       color: #f9004d;
       font-size: 1.2rem;
       font-weight: 400;
-            transition: .4s;
-        &:hover{
-            transform: scale(1.2);
+      transition: .4s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
-}}
+}
