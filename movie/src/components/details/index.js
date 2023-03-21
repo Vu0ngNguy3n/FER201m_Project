@@ -8,6 +8,7 @@ function Details() {
 	const [movie, setMovie] = useState({})
 	const [reviews, setReviews] = useState([])
 	const [review, setReview] = useState({})
+	const [edit, setEdit] = useState(false)
 
 	useEffect(() => {
 		fetch(`http://localhost:8000/movies/${id}`, {
@@ -28,15 +29,17 @@ function Details() {
 				setReviews(reviews)
 			})
 
-		// fetch(`http://localhost:8000/reviews`, {
-		// 	method: "POST",
-		// 	headers: { 'Content-Type': 'application/json' },
-		// 	body: JSON.stringify(obj)
-		// })
-		// 	.then(response => response.json())
-		// 	.then(data => console.log(data))
-		// 	.catch(error => console.log(error))
 	}, [])
+
+	useEffect(() => {
+		const score = reviews.reduce((total, rv) => {
+			return total + parseFloat(rv.star);
+		}, 0)
+		if(reviews.length > 0){
+			const averageScore = score/reviews.length;
+			setMovie({...movie, ['score']: averageScore})
+		}
+	}, [reviews])
 
 	const handleChange = (e) => {
 		const { value, name } = e.target;
@@ -79,7 +82,7 @@ function Details() {
 							<div className='row'>
 								<div className='col-sm-12'>
 									<span>Điểm đánh giá: </span>
-									<input type="text" name="score" value={review?.score || ''} onChange={handleChange} />
+									<input type="text" name="star" value={review?.star || ''} onChange={handleChange} />
 								</div>
 								<div className='col-sm-12'>
 									<span>Bình luận:</span>
