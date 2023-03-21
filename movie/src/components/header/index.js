@@ -1,22 +1,50 @@
-import  './Header.scss'
+import "./Header.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AccountContext } from "../../App";
+import { Button } from "bootstrap";
 
 function Header() {
-    return (
-      <header className="header">
-        <div className='left'>
-            <img src="https://w7.pngwing.com/pngs/1011/407/png-transparent-movies-logo-the-film-television-logo.png" />
-            <Link to='/'><h5>Trang chủ</h5></Link>
+  const { account, setAccount } = useContext(AccountContext);
+
+  return (
+    <div className="contain">
+      <div className="inner">
+        <Link className="logo" style={{ textDecoration: "none", color:'black' }} to="/">
+          MY <span>FILM</span>
+        </Link>
+        <div className="search">
+          <input placeholder="Enter a Film ..." />
+          <button className="clear">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+          <button className="searchbtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-        <div className='right'>
-            <input placeholder='Nhập tên cần tìm'/>
-            <button>Tìm</button>
-            <Link to='login'><p>Đăng nhập</p></Link>
-            <Link to='register'><p>Đăng kí</p></Link>
-            <p>Đăng xuất</p>
+        <div className="actions">
+          <Link
+            className="action"
+            style={{ textDecoration: "none" }}
+            to="/login"
+          >
+            <b>{account.id === undefined ? "Đăng nhập" : "Đăng xuất"}</b>
+          </Link>
+          {account.id === undefined ? (
+            <Link
+              className="action"
+              style={{ textDecoration: "none" }}
+              to="/register"
+            >
+              <b>Đăng ký</b>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
-      </header>
-    );
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
