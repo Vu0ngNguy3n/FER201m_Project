@@ -15,9 +15,13 @@
         li {
             padding: 10px;
             cursor: pointer;
-
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
             &:hover {
-                background-color: #555;
+                background-color: white;
+                color: rgb(0, 117, 117);
             }
         }
     }
