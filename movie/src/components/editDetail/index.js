@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import "./EditDetail.scss";
 
 function EditDetail({ id }) {
@@ -6,6 +8,7 @@ function EditDetail({ id }) {
   const [types, setTypes] = useState([]);
   const [description, setDescription] = useState("");
   const [newType, setNewType] = useState(-1);
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(`http://localhost:8000/movies`, {
@@ -39,6 +42,8 @@ function EditDetail({ id }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newMovie)
       });
+      navigate('/dashboard')
+      toast(`Edit Film ${newMovie.name} successfully!!!`)
   };
 
   return (

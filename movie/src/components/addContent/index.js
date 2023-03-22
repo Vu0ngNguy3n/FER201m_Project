@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import "./AddContent.scss";
 
 function AddContent() {
@@ -11,7 +12,7 @@ function AddContent() {
   const [img, setImg] = useState("");
   const [type, setType] = useState([]);
   const [film, setFilm] = useState([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:8000/type`, {
@@ -20,31 +21,34 @@ function AddContent() {
       .then((response) => response.json())
       .then((data) => setType(data));
 
-      fetch(`http://localhost:8000/movies`,{
-        method: 'GET'
-      }).then(response => response.json())
-      .then(data => setFilm(data))
+    fetch(`http://localhost:8000/movies`, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => setFilm(data));
   }, []);
 
   const handleAdd = () => {
-    const newId = film[film.length-1].id +1;
-    const newMovie ={
-        id: newId,
-        name: name,
-        year: year,
-        type: typeFilm,
-        score: 0,
-        description: description,
-        imageUrl: img
-    }
+    const newId = film[film.length - 1].id + 1;
+    const newMovie = {
+      id: newId,
+      name: name,
+      year: year,
+      type: typeFilm,
+      score: 0,
+      description: description,
+      imageUrl: img,
+    };
     fetch(`http://localhost:8000/movies`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newMovie),
     });
-    navigate('/dashboard')
-};
+    navigate("/dashboard");
+    toast(`Add Film ${name} successfully!! `)
+  };
 
+  
 
   return (
     <div className="addContent">
@@ -96,8 +100,11 @@ function AddContent() {
           />
         </div>
         <div className="addBtn">
-          <Link to='/dashboard'><button>Back</button></Link>
+          <Link to="/dashboard">
+            <button>Back</button>
+          </Link>
           <button onClick={handleAdd}>Add Film</button>
+          
         </div>
       </div>
     </div>

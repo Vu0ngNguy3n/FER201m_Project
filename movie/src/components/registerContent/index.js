@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import "./RegisterContent.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { AccountContext } from "../../App";
+import { toast } from "react-toastify";
 
 function RegisterContent() {
   const [mail, setMail] = useState("");
@@ -43,6 +44,7 @@ function RegisterContent() {
         });
         setAccount(newAccount);
         navigate("/");
+        toast('Sign Up Successfully!!!')
       }
     }
   };

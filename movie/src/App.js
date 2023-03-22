@@ -9,23 +9,26 @@ import "bootstrap/dist/css/bootstrap.css";
 import { createContext, useContext, useState } from "react";
 import AddFilm from "./pages/AddFilm/AddFilm";
 import EditFilm from "./pages/EditFilm/EditFilm";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const AccountContext = createContext();
 
 function App() {
   const [account, setAccount] = useState();
 
   return (
-    <AccountContext.Provider value={{account, setAccount}}>
+    <AccountContext.Provider value={{ account, setAccount }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/moviedetail/:id" element={<MovieDetail />} />
-          <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/addfilm" element={<AddFilm/>} />
-          <Route path="/editfilm/:id" element={<EditFilm/>}/>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/addfilm" element={<AddFilm />} />
+          <Route path="/editfilm/:id" element={<EditFilm />} />
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </AccountContext.Provider>
   );

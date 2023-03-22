@@ -69,6 +69,13 @@
       "email": "1",
       "password": "1",
       "gender": "Male"
+    },
+    {
+      "id": 11,
+      "name": "Thanh",
+      "email": "thanh",
+      "password": "12345678",
+      "gender": "Male"
     }
   ],
   "movies": [
@@ -79,7 +86,7 @@
       "type": "Hoạt hình",
       "typeID": 4,
       "score": 7.65,
-      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.1",
+      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.1223",
       "imageUrl": "https://static.tvtropes.org/pmwiki/pub/images/2e5c6d37_566f_4274_b62d_ebf5fcbd0722.png"
     },
     {
@@ -104,7 +111,6 @@
     },
     {
       "id": 4,
-<<<<<<< HEAD
       "name": "Batman",
       "year": 2022,
       "type": "Khoa học - Nghệ thuật",
@@ -112,15 +118,6 @@
       "score": 7.65,
       "description": "Hiệp sĩ bóng tối của thành phố Gotham đụng độ kẻ thù đầu tiên của mình: tên Jocker có bộ mặt thằng hề, một kẻ nguy hiểm đang lên kế hoạch phun khí độc để khiến mọi người đều chết với bộ mặt cười như hắn. Một nữ phóng viên cố gắng tìm cách lần ra dấu vết của Batman và nàng lại rơi vào vòng tay của chàng tỷ phu Bruce Wayne...",
       "imageUrl": "https://i.pinimg.com/750x/d3/b1/11/d3b111f9ed42550adf9d5b3ef228296d.jpg"
-=======
-      "name": "Naruto",
-      "year": 2019,
-      "type": "Hoạt hình",
-      "typeID": 4,
-      "score": 9.65,
-      "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
->>>>>>> a4199fd8c7fc11c867bb79558f1a9c3d9e08c207
     },
     {
       "id": 5,
@@ -137,7 +134,6 @@
       "name": "Avengers",
       "year": "2021",
       "type": "Khoa học - Nghệ thuật",
-      "typeID": 5,
       "score": 0,
       "description": "Bộ phim Avenger",
       "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
@@ -147,10 +143,18 @@
       "name": "50 Sắc Thái",
       "year": "2020",
       "type": "Tình cảm",
-      "typeID": 2,
       "score": 0,
       "description": "Bộ phim tình cảm ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Spider Man 1",
+      "year": "2020",
+      "type": "5",
+      "score": 0,
+      "description": "Người nhện là một siêu anh hùng hư cấu trong các truyện tranh xuất bản bởi Marvel Comics. Nhân vật này được sáng tạo bởi nhà văn Stan Lee và nhà văn-nghệ sĩ Steve Ditko, lần đầu xuất hiện trong Amazing Fantasy",
+      "imageUrl": "https://i.pinimg.com/736x/71/b2/10/71b210133cc4e438f0f099de28147d82.jpg"
     }
   ],
   "reviews": [
@@ -204,25 +208,35 @@
       "star": 9
     },
     {
-      "star": "7",
-      "content": "Phim cũng hay.",
-      "user_id": 3,
+      "id": 8
+    },
+    {
+      "content": "Đúng là kiệt tác điện ảnh",
+      "user_id": 1,
+      "movie_id": 5,
+      "star": 9,
+      "id": 9
+    },
+    {
+      "content": "Đúng là kiệt tác điện ảnh",
+      "user_id": 1,
+      "movie_id": 5,
+      "star": 9,
+      "id": 10
+    },
+    {
+      "score": "10",
+      "content": "Truyện hay đấy",
+      "user_id": 1,
+      "movie_id": "1",
+      "id": 11
+    },
+    {
+      "content": "Anh em không nên xem",
+      "score": "9",
+      "user_id": 1,
       "movie_id": "2",
-      "id": 13
-    },
-    {
-      "star": "9",
-      "content": "Phim tàm tạm.",
-      "user_id": 1,
-      "movie_id": "6",
-      "id": 14
-    },
-    {
-      "star": "10",
-      "content": "Nếu có thang điểm 100, thì phim là 1000/100.",
-      "user_id": 1,
-      "movie_id": "7",
-      "id": 15
+      "id": 12
     }
   ],
   "type": [
