@@ -40,11 +40,12 @@ function Header() {
           </button>
         </div>
         <div className="actions">
+          {!account ? "" : <b>Hello {account.name}</b>}
           <Link
             className="action"
             style={{ textDecoration: "none" }}
             to="/login"
-            onClick={()=> setAccount(null)}
+            onClick={() => setAccount(null)}
           >
             {!account ? <b>Đăng Nhập</b> : <b>Đăng Xuất</b>}
           </Link>

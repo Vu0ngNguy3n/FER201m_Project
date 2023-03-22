@@ -51,9 +51,16 @@
     },
     {
       "id": 8,
-      "name": "ngoquangtrung",
-      "email": "ngoquangtrung2047@gmail.com",
-      "password": "123",
+      "name": "Quan",
+      "email": "quan",
+      "password": "12345678",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "name": "Khanh",
+      "email": "khanh",
+      "password": "12345678",
       "gender": "Male"
     }
   ],
@@ -102,6 +109,24 @@
       "score": 9.2,
       "description": "Cuốn theo chiều gió, xuất bản lần đầu năm 1936, là một cuốn tiểu thuyết tình cảm của Margaret Mitchell, người đã giành giải Pulitzer với tác phẩm này năm 1937. Câu chuyện được đặt bối cảnh tại Georgia và Atlanta, miền Nam Hoa Kỳ trong suốt thời kì nội chiến và thời tái thiết.",
       "imageUrl": "https://media1.nguoiduatin.vn/media/nguyen-minh-anh/2019/01/28/ndt14.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Avengers",
+      "year": "2021",
+      "type": "Khoa học - Nghệ thuật",
+      "score": 0,
+      "description": "Bộ phim Avenger",
+      "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
+    },
+    {
+      "id": 7,
+      "name": "50 Sắc Thái",
+      "year": "2020",
+      "type": "Tình cảm",
+      "score": 0,
+      "description": "Bộ phim tình cảm ",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg"
     }
   ],
   "reviews": [
@@ -113,11 +138,11 @@
       "star": 9
     },
     {
-      "star": "10",
-      "content": "123",
-      "user_id": 8,
-      "movie_id": "2",
-      "id": 2
+      "id": 2,
+      "content": "Phim dở ẹc",
+      "user_id": 1,
+      "movie_id": 2,
+      "star": 3
     },
     {
       "id": 3,
@@ -155,6 +180,9 @@
       "star": 9
     },
     {
+      "id": 8
+    },
+    {
       "content": "Đúng là kiệt tác điện ảnh",
       "user_id": 1,
       "movie_id": 5,
@@ -169,7 +197,7 @@
       "id": 10
     },
     {
-      "star": "10",
+      "score": "10",
       "content": "Truyện hay đấy",
       "user_id": 1,
       "movie_id": "1",
@@ -177,52 +205,10 @@
     },
     {
       "content": "Anh em không nên xem",
-      "star": "9",
-      "user_id": 2,
+      "score": "9",
+      "user_id": 1,
       "movie_id": "2",
       "id": 12
-    },
-    {
-      "star": "10",
-      "content": "123",
-      "user_id": 1,
-      "movie_id": "3",
-      "id": 14
-    },
-    {
-      "star": "10",
-      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
-      "user_id": 1,
-      "movie_id": "2",
-      "id": 15
-    },
-    {
-      "star": "10",
-      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
-      "user_id": 1,
-      "movie_id": "2",
-      "id": 16
-    },
-    {
-      "star": "10",
-      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
-      "user_id": 8,
-      "movie_id": "2",
-      "id": 17
-    },
-    {
-      "content": "Phim bình thường ",
-      "star": "9.2",
-      "user_id": 8,
-      "movie_id": "2",
-      "id": 18
-    },
-    {
-      "star": "0",
-      "content": "Hay 12345",
-      "user_id": 8,
-      "movie_id": "3",
-      "id": 19
     }
   ],
   "type": [

@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 
 import "bootstrap/dist/css/bootstrap.css";
 import { createContext, useContext, useState } from "react";
+import AddFilm from "./pages/AddFilm/AddFilm";
 export const AccountContext = createContext();
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/moviedetail/:id" element={<MovieDetail />} />
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/addfilm" element={<AddFilm/>} />
         </Routes>
       </BrowserRouter>
     </AccountContext.Provider>
