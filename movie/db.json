@@ -248,6 +248,16 @@
       "score": 0,
       "description": "Người khổng lồ xanh",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679505465/obd99pjql0gv3afey7zj.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Nhà Bà Nữ",
+      "year": "2023",
+      "type": "Tình cảm",
+      "typeID": "2",
+      "score": 0,
+      "description": "Nhà bà Nữ là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Bộ phim do Đỗ Hoàng Vũ, quản lý của Trấn Thành và Hari Won đảm nhận vai trò đồng sản xuất",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679508915/ubsmurmad53dply7y9cv.jpg"
     }
   ],
   "reviews": [
@@ -351,6 +361,13 @@
       "id": 16,
       "star": "10",
       "content": "Cũng tạm á!"
+    },
+    {
+      "star": "10",
+      "content": "Phim Hay vcl",
+      "user_id": 5,
+      "movie_id": "1",
+      "id": 17
     }
   ],
   "type": [

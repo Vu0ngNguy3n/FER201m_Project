@@ -30,7 +30,8 @@ function AddContent() {
   }, []);
 
   const handleAdd = () => {
-    const newId = film[film.length - 1].id + 1;
+    if(name !== '' && year !== '' && description !== ''){
+      const newId = film[film.length - 1].id + 1;
     const newTypeAdd = type.find((item) => item.id == typeID);
     const newTypeName = newTypeAdd.category;
     const data = new FormData();
@@ -65,6 +66,9 @@ function AddContent() {
       .catch((err) => {
         console.log(err);
       });
+    }else{
+      toast('Have Information Blank')
+    }
   };
 
   const submitImage = () => {};
