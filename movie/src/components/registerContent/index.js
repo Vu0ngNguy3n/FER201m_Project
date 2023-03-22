@@ -10,6 +10,7 @@ function RegisterContent() {
   const [gender, setGender] = useState("Male");
   const [accounts, setAccounts] = useState([]);
   const { setAccount } = useContext(AccountContext);
+  const [isExist, setIsExist] = useState(false);
 
   const navigate = useNavigate();
 
@@ -23,22 +24,26 @@ function RegisterContent() {
 
   const handleRegister = () => {
     if (mail !== "" && password !== "" && fullname !== "") {
-      const newId = accounts[accounts.length - 1].id + 1;
-      const newAccount = {
-        id: newId,
-        name: fullname,
-        email: mail,
-        password: password,
-        gender: gender,
-      };
-      fetch(`http://localhost:8000/account`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newAccount),
-      });
-      setAccount(newAccount);
-      navigate("/");
-    } else {
+      const valid = accounts.findIndex((e) => e.email === mail);
+      if (valid !== -1) {
+        setIsExist(true);
+      } else {
+        const newId = accounts[accounts.length - 1].id + 1;
+        const newAccount = {
+          id: newId,
+          name: fullname,
+          email: mail,
+          password: password,
+          gender: gender,
+        };
+        fetch(`http://localhost:8000/account`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newAccount),
+        });
+        setAccount(newAccount);
+        navigate("/");
+      }
     }
   };
 
@@ -47,13 +52,28 @@ function RegisterContent() {
       <div className="registerContent">
         <div className="leftRegister">
           <div className="input">
-            <label htmlFor="mail">Email: </label>
+            <label
+              htmlFor="mail"
+              style={{ color: isExist === true ? "#f9004d" : "" }}
+            >
+              Email:{" "}
+            </label>
             <input
               placeholder="Enter mail address "
               id="mail"
+              style={{
+                borderBottom: isExist === true ? "1px solid #f9004d " : "",
+              }}
               onChange={(e) => setMail(e.target.value)}
             />
           </div>
+          {isExist === true ? (
+            <p style={{ color: isExist === true ? "#f9004d" : "" }}>
+              Your Email is Exist!!!
+            </p>
+          ) : (
+            ""
+          )}
           <div className="input">
             <label htmlFor="fullname">Full Name: </label>
             <input

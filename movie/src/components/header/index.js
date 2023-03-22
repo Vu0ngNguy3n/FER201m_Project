@@ -1,6 +1,6 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AccountContext } from "../../App";
 import { Button } from "bootstrap";
 
@@ -44,6 +44,7 @@ function Header() {
             className="action"
             style={{ textDecoration: "none" }}
             to="/login"
+            onClick={()=> setAccount(null)}
           >
             {!account ? <b>Đăng Nhập</b> : <b>Đăng Xuất</b>}
           </Link>

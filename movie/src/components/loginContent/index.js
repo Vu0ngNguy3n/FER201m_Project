@@ -24,9 +24,7 @@ function LoginContent() {
       });
   }, []);
 
-  useEffect(() => {
-    setAccount();
-  }, []);
+  
   const handleLogin = () => {
     const account = listAccount.find(
       (a) => a.email === mail && a.password === password

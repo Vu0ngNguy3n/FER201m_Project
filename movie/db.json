@@ -34,6 +34,20 @@
       "email": "vuong",
       "password": "12345678",
       "gender": "Male"
+    },
+    {
+      "id": 6,
+      "name": "Hoan",
+      "email": "hoan ",
+      "password": "12345678",
+      "gender": "Male"
+    },
+    {
+      "id": 7,
+      "name": "Hoan",
+      "email": "hoan",
+      "password": "12345678",
+      "gender": "Male"
     }
   ],
   "movies": [
