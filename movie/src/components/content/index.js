@@ -8,15 +8,29 @@ import CardMovie from '../rightDashboard/CardMovie';
 function Content({ type }) {
     const [movies, setMovie] = useState(data);
     const navigate = useNavigate();
+    const [searchMovie, setSearchMovie] = useState(movies);
 
     useEffect(() => {
-        fetch(' http://localhost:8000/movies', {
+        fetch('http://localhost:8000/movies', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         })
             .then(response => response.json())
             .then(movies => setMovie(movies))
-    })
+
+    },[])
+
+    useEffect(() => {
+        setSearchMovie(movies)
+    }, [movies])
+
+
+    useEffect(() => {
+        if(type !== undefined){
+            const filterMovies =  movies.filter((movie) => movie.typeID == type);
+            setSearchMovie(filterMovies);
+        }
+    }, [type])
 
     const redirectPage = (id) => {
         navigate(`/moviedetail/${id}`)
@@ -28,8 +42,8 @@ function Content({ type }) {
             <div className='rightDashboard'>
                 {
 
-                    movies?.map((item, index) => (
-                        <div className='card' onClick={() => redirectPage(item.id)}>
+                    searchMovie?.map((item, index) => (
+                        <div className='card' onClick={() => redirectPage(item.id)} key={index}>
                             <img src={item.imageUrl} />
                             <div className='cardContent'>
                                 <h4>{item.name}</h4>
