@@ -69,6 +69,13 @@
       "email": "1",
       "password": "1",
       "gender": "Male"
+    },
+    {
+      "id": 11,
+      "name": "1",
+      "email": "2",
+      "password": "1",
+      "gender": "Male"
     }
   ],
   "movies": [
@@ -222,6 +229,13 @@
       "user_id": 1,
       "movie_id": "7",
       "id": 15
+    },
+    {
+      "user_id": 11,
+      "movie_id": "4",
+      "id": 16,
+      "star": "10",
+      "content": "Cũng tạm á!"
     }
   ],
   "type": [
