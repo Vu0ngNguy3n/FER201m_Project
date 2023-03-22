@@ -168,6 +168,26 @@
       "score": 0,
       "description": "Người nhện là một siêu anh hùng hư cấu trong các truyện tranh xuất bản bởi Marvel Comics. Nhân vật này được sáng tạo bởi nhà văn Stan Lee và nhà văn-nghệ sĩ Steve Ditko, lần đầu xuất hiện trong Amazing Fantasy",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679501630/gevgdefjsfq2ic9xcbkg.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Captain America",
+      "year": "2019",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": "5",
+      "score": 0,
+      "description": "Captain America là một siêu anh hùng hư cấu xuất hiện trong truyện tranh của Hoa Kỳ được xuất bản bởi Marvel Comics. Được tạo bởi họa sĩ truyện tranh Joe Simon và Jack Kirby, nhân vật lần đầu tiên xuất hiện trong Captain America Comics",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679502646/nvcekrzqbbcsavgljlqu.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Iron Man",
+      "year": "2020",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": "5",
+      "score": 0,
+      "description": "Một bộ phim điện ảnh đề tài siêu anh hùng của Mỹ năm 2008 dựa trên nhân vật truyện tranh cùng tên của Marvel Comics",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679502771/lfdvnrxfkipvyv1gftoj.jpg"
     }
   ],
   "reviews": [

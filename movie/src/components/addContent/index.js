@@ -11,7 +11,7 @@ function AddContent() {
   const [description, setDiscription] = useState("");
   const [img, setImg] = useState("");
   const [type, setType] = useState([]);
-  const [typeID, setTypeID] = useState(-1);
+  const [typeID, setTypeID] = useState(1);
   const [film, setFilm] = useState([]);
   const navigate = useNavigate();
 
@@ -64,6 +64,7 @@ function AddContent() {
         console.log(err);
       });
     navigate("/dashboard");
+    toast(`Add Film ${name} successfully`)
   };
 
   const submitImage = () => {};
