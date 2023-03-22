@@ -1,13 +1,22 @@
 import './Details.scss'
-import accounts from "../../json/account.json"
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { AccountContext } from "../../App";
+
 
 function Details() {
 	const { id } = useParams()
 	const [movie, setMovie] = useState({})
 	const [reviews, setReviews] = useState([])
 	const [review, setReview] = useState({})
+	const { account } = useContext(AccountContext);
+	const [accounts, setAccounts] = useState()
+
+	useEffect(() => {
+		fetch("http://localhost:8000/account")
+			.then(response => response.json())
+			.then(data => setAccounts(data))
+	}, [])
 
 	useEffect(() => {
 		fetch(`http://localhost:8000/movies/${id}`, {
@@ -29,8 +38,6 @@ function Details() {
 			})
 	}, [id])
 
-	
-
 	const handleChange = (e) => {
 		const { value, name } = e.target;
 
@@ -38,19 +45,22 @@ function Details() {
 			{ ...review, [name]: value }
 		)
 	}
-
 	const handleAdd = () => {
-		const newReview = {
-			...review,
-			user_id: 1,
-			movie_id: id
+		if (reviews.every(rv => rv.user_id !== account.id)) {
+			const newReview = {
+				...review,
+				user_id: 1,
+				movie_id: id
+			}
+			setReviews([...reviews, newReview]);
+			fetch(`http://localhost:8000/reviews`, {
+				method: "POST",
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(newReview)
+			})
+		}else{
+			alert("You only edit this comment")
 		}
-		setReviews([...reviews, newReview]);
-		fetch(`http://localhost:8000/reviews`, {
-			method: "POST",
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(newReview)
-		})
 	}
 
 	return (

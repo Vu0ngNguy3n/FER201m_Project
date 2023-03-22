@@ -11,6 +11,7 @@ function Sidebar() {
         <div className='sideBar'>
                 <h2>Thể Loại</h2>
                 <hr />
+				<Link to="moviedetail/2">ab</Link>
 
             {
                 category?.map((item, index) => (
