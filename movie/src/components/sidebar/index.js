@@ -14,7 +14,7 @@ function Sidebar({ setType }) {
     })
       .then((response) => response.json())
       .then((category) => setCategory(category));
-  });
+  }, []);
 
   return (
     <div className="sideBar">

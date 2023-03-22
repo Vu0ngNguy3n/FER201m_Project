@@ -5,7 +5,7 @@ import { Link, useNavigate, userParms } from 'react-router-dom'
 import CardMovie from '../rightDashboard/CardMovie';
 
 
-function Content({ type }) {
+function Content({ type, search }) {
     const [movies, setMovie] = useState(data);
     const navigate = useNavigate();
     const [searchMovie, setSearchMovie] = useState(movies);
@@ -17,7 +17,7 @@ function Content({ type }) {
         })
             .then(response => response.json())
             .then(movies => setMovie(movies))
-
+		
     },[])
 
     useEffect(() => {
@@ -31,6 +31,13 @@ function Content({ type }) {
             setSearchMovie(filterMovies);
         }
     }, [type])
+
+	useEffect(() => {
+		if(search !== undefined){
+            const filterMovies =  movies.filter((movie) => movie.name.includes(search));
+            setSearchMovie(filterMovies);
+        }
+	}, [search])
 
     const redirectPage = (id) => {
         navigate(`/moviedetail/${id}`)

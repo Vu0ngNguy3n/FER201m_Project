@@ -9,10 +9,10 @@ function Home() {
 	const [search, setSearch] = useState();
 	return (
 		<div>
-			<Header setSearch={setSearch} />
+			<Header setSearch={setSearch} search={search}/>
 			<div className='container'>
 				<Sidebar setType={setType} />
-				<Content type={type} />
+				<Content type={type} search={search}/>
 			</div>
 		</div>
 	)
