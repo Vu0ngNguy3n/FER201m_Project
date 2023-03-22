@@ -27,7 +27,7 @@ function LeftDashboard(){
             <ul>
                 {type.map((t,index) => {
                     return (
-                        <li key={index}>{t}</li>
+                        <li key={index}>{t.category}</li>
                     )
                 })}
             </ul>

@@ -214,13 +214,35 @@
       "user_id": 1,
       "movie_id": "2",
       "id": 12
+    },
+    {
+      "star": "10",
+      "content": "1",
+      "user_id": 3,
+      "movie_id": "4",
+      "id": 13
     }
   ],
   "type": [
-    {"id": "1", "category": "Hành động"},
-    {"id": "2", "category": "Tình cảm"},
-    {"id": "3", "category":"Kinh dị"},
-    {"id": "4", "category":"Hoạt hình"},
-    {"id": "5", "category":"Khoa học - Nghệ thuật"}
-]
+    {
+      "id": "1",
+      "category": "Hành động"
+    },
+    {
+      "id": "2",
+      "category": "Tình cảm"
+    },
+    {
+      "id": "3",
+      "category": "Kinh dị"
+    },
+    {
+      "id": "4",
+      "category": "Hoạt hình"
+    },
+    {
+      "id": "5",
+      "category": "Khoa học - Nghệ thuật"
+    }
+  ]
 }

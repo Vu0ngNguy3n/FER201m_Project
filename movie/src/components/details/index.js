@@ -49,7 +49,6 @@ function Details() {
 
 	useEffect(() => {
 		const score = reviews.reduce((total, rv) => {
-			console.log(total, rv);
 			return total + parseFloat(rv.star);
 		}, 0)
 		if (reviews.length > 0) {
@@ -73,22 +72,26 @@ function Details() {
 			user_id: account.id,
 			movie_id: id
 		}
+		const currentReview = reviews.find(rv => rv.user_id === account.id)
 
-		if (review === undefined) {
+		
+		if (currentReview === undefined) {
 			method = "POST"
 			url = ""
 			setReviews([...reviews, newReview]);
+			console.log(newReview);
 		} else {
 			method = "PUT"
 			url = `/${review.id}`
 			const newReviews = reviews.map(rv => {
-				if (rv.id !== review.id) {
+				if (rv.id !== currentReview.id) {
 					return rv
 				} else {
 					return newReview
 				}
 			})
 			setReviews(newReviews)
+			console.log(newReview);
 		}
 
 		fetch(`http://localhost:8000/reviews${url}`, {
