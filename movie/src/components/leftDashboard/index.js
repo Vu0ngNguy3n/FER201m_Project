@@ -40,6 +40,9 @@ function LeftDashboard() {
   const navigateDashboard =()=>{
     navigate('/dashboard')
   }
+  const navigateUser = () => {
+    navigate('/user')
+  }
 
   return (
     <div className="leftDashboard">
@@ -72,12 +75,17 @@ function LeftDashboard() {
               color: "#f9004d",
             }}
           >
-            <p>Add Type <i class="fa-solid fa-plus"></i></p>
+            <p>
+              Add Type <i class="fa-solid fa-plus"></i>
+            </p>
           </li>
         </ul>
       </div>
       <div>
         <h5 onClick={navigateDashboard}>Danh sách phim</h5>
+      </div>
+      <div>
+        <h5 onClick={navigateUser}>Quản lí người dùng</h5>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { createContext, useContext, useState } from "react";
 import AddFilm from "./pages/AddFilm/AddFilm";
 import EditFilm from "./pages/EditFilm/EditFilm";
+import UserManagement from './pages/UserManagement/UserManagement'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Page404 from "./pages/404Page/404Page";
@@ -26,7 +27,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
-            <Route path="*" element={<Page404/>}/>
+            <Route path="*" element={<Page404 />} />
             {account?.role === 0 && (
               <Route path="/dashboard" element={<Dashboard />} />
             )}
@@ -36,6 +37,9 @@ function App() {
             {account?.role === 0 && (
               <Route path="/editfilm/:id" element={<EditFilm />} />
             )}
+            {/* {account?.role === 0 && ( */}
+              <Route path="/user" element={<UserManagement />} />
+            {/* )} */}
           </Routes>
           <ToastContainer />
         </BrowserRouter>
