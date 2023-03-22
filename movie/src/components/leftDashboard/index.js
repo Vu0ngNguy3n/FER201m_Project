@@ -14,7 +14,7 @@ function LeftDashboard(){
 
     return (
       <div className="leftDashboard">
-        <h3>Dashboard</h3>
+        <h3><span>Dash</span>board</h3>
         <hr/>
         <div>
           <h5>Thể loại</h5>
