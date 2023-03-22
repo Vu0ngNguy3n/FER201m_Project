@@ -28,6 +28,7 @@ function RegisterContent() {
       const valid = accounts.findIndex((e) => e.email === mail);
       if (valid !== -1) {
         setIsExist(true);
+        toast(`Email ${mail} is Exist!!!`)
       } else {
         const newId = accounts[accounts.length - 1].id + 1;
         const newAccount = {
@@ -47,6 +48,8 @@ function RegisterContent() {
         navigate("/");
         toast('Sign Up Successfully!!!')
       }
+    }else{
+      toast('One More Information is Blank!!!')
     }
   };
 
