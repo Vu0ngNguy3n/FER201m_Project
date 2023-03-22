@@ -287,7 +287,28 @@
       "score": "9",
       "user_id": 1,
       "movie_id": "2",
-      "id": 12
+      "id": 13
+    },
+    {
+      "star": "9",
+      "content": "Phim tàm tạm.",
+      "user_id": 1,
+      "movie_id": "6",
+      "id": 14
+    },
+    {
+      "star": "10",
+      "content": "Nếu có thang điểm 100, thì phim là 1000/100.",
+      "user_id": 1,
+      "movie_id": "7",
+      "id": 15
+    },
+    {
+      "user_id": 11,
+      "movie_id": "4",
+      "id": 16,
+      "star": "10",
+      "content": "Cũng tạm á!"
     }
   ],
   "type": [

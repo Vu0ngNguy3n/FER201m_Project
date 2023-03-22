@@ -1,18 +1,13 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { AccountContext } from "../../App";
-import { Button } from "bootstrap";
 
-function Header() {
+function Header({setSearch, search}) {
   const { account, setAccount } = useContext(AccountContext);
-  const [search, setSearch] = useState("");
-
-  const searchRef = useRef();
 
   const clearSearch = () => {
     setSearch("");
-    searchRef.current.focus();
   };
 
   return (
@@ -28,8 +23,7 @@ function Header() {
         <div className="search">
           <input
             onChange={(e) => setSearch(e.target.value)}
-            ref={searchRef}
-            value={search}
+			value={search || ''}
             placeholder="Enter a Film ..."
           />
           <button className="clear" onClick={clearSearch}>

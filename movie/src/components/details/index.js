@@ -2,7 +2,6 @@ import './Details.scss'
 import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AccountContext } from "../../App";
-import UploadImage from '../uploadImage';
 
 
 function Details() {
@@ -66,50 +65,70 @@ function Details() {
 		)
 	}
 	const handleAdd = () => {
-		let method = "";
-		let url = ""
-		const newReview = {
-			...review,
-			user_id: account.id,
-			movie_id: id
-		}
-		const currentReview = reviews.find(rv => rv.user_id === account.id)
+		if (checkEmpty(review?.star, review?.content) && checkFloat(review?.star)) {
+			let method = "";
+			let url = ""
+			const newReview = {
+				...review,
+				user_id: account.id,
+				movie_id: id
+			}
+			const currentReview = reviews.find(rv => rv.user_id === account.id)
 
-
-		if (currentReview === undefined) {
-			method = "POST"
-			url = ""
-			setReviews([...reviews, newReview]);
-			console.log(newReview);
-		} else {
-			method = "PUT"
-			url = `/${review.id}`
-			const newReviews = reviews.map(rv => {
-				if (rv.id !== currentReview.id) {
-					return rv
-				} else {
-					return newReview
-				}
+			if (currentReview === undefined) {
+				method = "POST"
+				url = ""
+				setReviews([...reviews, newReview]);
+				console.log(newReview);
+			} else {
+				method = "PUT"
+				url = `/${review.id}`
+				const newReviews = reviews.map(rv => {
+					if (rv.id !== currentReview.id) {
+						return rv
+					} else {
+						return newReview
+					}
+				})
+				setReviews(newReviews)
+			}
+			fetch(`http://localhost:8000/reviews${url}`, {
+				method: method,
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(newReview)
 			})
-			setReviews(newReviews)
-			console.log(newReview);
 		}
 
-		fetch(`http://localhost:8000/reviews${url}`, {
-			method: method,
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(newReview)
-		})
+	}
+
+	const checkEmpty = (...param) => {
+		for (let index = 0; index < param.length; index++) {
+			const element = param[index];
+			if (element === undefined || element.trim() === '') {
+				alert("Field must not be blank.")
+				return false;
+			}
+		}
+		return true;
+	}
+
+	const checkFloat = (number) => {
+		const numberFloat = parseFloat(number)
+		if(!isNaN(numberFloat) && typeof(numberFloat) === 'number' && numberFloat >= 1 && numberFloat <= 10){
+			return true;
+		}else{
+			alert("Score must be from 1 - 10");
+			return false;
+		}
 	}
 
 	return (
 		<div className='container'>
-			<UploadImage />
 			<div className='row'>
 				<div className='col-sm-12'>
 					<div className='row'>
 						<div className='col-sm-4'>
-							<img src={movie.imageUrl} alt={movie.name} width="auto" height="500px" />
+							<img src={movie.imageUrl} alt={movie.name} width="auto" height="500px" style={{maxWidth: "370px"}} />
 						</div>
 						<div className='col-sm-8'>
 							<div className='row'>
@@ -134,7 +153,7 @@ function Details() {
 							<hr />
 							<div className='row'>
 								<h2 className='col-sm-12'>Bình luận</h2>
-								{reviews.map(rv => (
+								{reviews.length > 0 ? reviews.map(rv => (
 									<div className='col-sm-12' key={rv.id}>
 										<span
 											style={{ fontWeight: 'bold' }}
@@ -146,7 +165,7 @@ function Details() {
 											{rv.content}
 										</span>
 									</div>
-								))}
+								)) : <span className='col-sm-12'>Chưa có bình luận nào</span>}
 							</div>
 						</div>
 					</div>
