@@ -41,6 +41,15 @@ function Header() {
         </div>
         <div className="actions">
           {!account ? "" : <b>Hello {account.name}</b>}
+          {account?.role === 0 && (
+            <Link
+              className="action"
+              style={{ textDecoration: "none" }}
+              to="/dashboard"
+            >
+              <b>Dashboard</b>
+            </Link>
+          )}
           <Link
             className="action"
             style={{ textDecoration: "none" }}

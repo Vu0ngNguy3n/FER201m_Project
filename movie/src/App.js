@@ -15,21 +15,29 @@ export const AccountContext = createContext();
 
 function App() {
   const [account, setAccount] = useState();
-
+  console.log(account);
   return (
     <AccountContext.Provider value={{ account, setAccount }}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/moviedetail/:id" element={<MovieDetail />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/addfilm" element={<AddFilm />} />
-          <Route path="/editfilm/:id" element={<EditFilm />} />
-        </Routes>
-        <ToastContainer />
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            {account?.role === 0 && (
+              <Route path="/dashboard" element={<Dashboard />} />
+            )}
+            {account?.role === 0 && (
+              <Route path="/addfilm" element={<AddFilm />} />
+            )}
+            {account?.role === 0 && (
+              <Route path="/editfilm/:id" element={<EditFilm />} />
+            )}
+          </Routes>
+          <ToastContainer />
+        </BrowserRouter>
+      </div>
     </AccountContext.Provider>
   );
 }
