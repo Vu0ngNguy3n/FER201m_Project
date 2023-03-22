@@ -75,7 +75,7 @@ function Details() {
 		}
 		const currentReview = reviews.find(rv => rv.user_id === account.id)
 
-		
+
 		if (currentReview === undefined) {
 			method = "POST"
 			url = ""
