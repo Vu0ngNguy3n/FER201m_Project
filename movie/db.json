@@ -94,6 +94,14 @@
       "password": "12345678",
       "gender": "Male",
       "role": 1
+    },
+    {
+      "id": 13,
+      "name": "Vuong",
+      "email": "vuong1",
+      "password": "12345678",
+      "gender": "Male",
+      "role": 1
     }
   ],
   "movies": [
@@ -206,6 +214,26 @@
       "score": 0,
       "description": "Một bộ phim điện ảnh đề tài siêu anh hùng của Mỹ năm 2008 dựa trên nhân vật truyện tranh cùng tên của Marvel Comics",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679502771/lfdvnrxfkipvyv1gftoj.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Tom & Jerry",
+      "year": "2000",
+      "type": "Hoạt hình",
+      "typeID": "4",
+      "score": 0,
+      "description": "Tom và Jerry là một series phim hoạt hình của Mỹ được chiếu trên truyền hình và rạp hát với nhiều thể loại từ phim ngắn cho tới phim dài.",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679505385/sml2b3fnwrgtnqge3hjl.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Hulk",
+      "year": "2017",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": "5",
+      "score": 0,
+      "description": "Người khổng lồ xanh",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679505465/obd99pjql0gv3afey7zj.jpg"
     }
   ],
   "reviews": [

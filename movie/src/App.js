@@ -11,6 +11,7 @@ import AddFilm from "./pages/AddFilm/AddFilm";
 import EditFilm from "./pages/EditFilm/EditFilm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Page404 from "./pages/404Page/404Page";
 export const AccountContext = createContext();
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            <Route path="*" element={<Page404/>}/>
             {account?.role === 0 && (
               <Route path="/dashboard" element={<Dashboard />} />
             )}

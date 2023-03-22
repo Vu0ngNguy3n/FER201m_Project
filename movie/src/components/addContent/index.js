@@ -59,12 +59,12 @@ function AddContent() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newMovie),
         });
+        navigate("/dashboard");
+        toast(`Add Film ${name} successfully`);
       })
       .catch((err) => {
         console.log(err);
       });
-    navigate("/dashboard");
-    toast(`Add Film ${name} successfully`)
   };
 
   const submitImage = () => {};

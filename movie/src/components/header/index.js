@@ -2,6 +2,8 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { AccountContext } from "../../App";
+import { toast } from "react-toastify";
+
 
 function Header({setSearch, search}) {
   const { account, setAccount } = useContext(AccountContext);
@@ -23,7 +25,7 @@ function Header({setSearch, search}) {
         <div className="search">
           <input
             onChange={(e) => setSearch(e.target.value)}
-			value={search || ''}
+            value={search || ""}
             placeholder="Enter a Film ..."
           />
           <button className="clear" onClick={clearSearch}>
@@ -48,9 +50,19 @@ function Header({setSearch, search}) {
             className="action"
             style={{ textDecoration: "none" }}
             to="/login"
-            onClick={() => setAccount(null)}
           >
-            {!account ? <b>Đăng Nhập</b> : <b>Đăng Xuất</b>}
+            {!account ? <b>Đăng Nhập</b> : ''}
+          </Link>
+          <Link
+            className="action"
+            style={{ textDecoration: "none" }}
+            to="/login"
+            onClick={() => {
+              setAccount(null)
+              toast('Log Out Successfully!!')
+            }}
+          >
+            {!account ? '': <b>Đăng Xuất</b>}
           </Link>
           {!account ? (
             <Link
