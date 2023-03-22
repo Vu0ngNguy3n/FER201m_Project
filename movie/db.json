@@ -5,49 +5,56 @@
       "name": "Ngô Tuấn Địch",
       "email": "ngotuandich@gmail.com",
       "password": "12345678",
-      "gender": "Nam"
+      "gender": "Nam",
+      "role": 1
     },
     {
       "id": 2,
       "name": "Phùng Địch Thủ",
       "email": "phungdichthu@gmail.com",
       "password": "12345678",
-      "gender": "Nam"
+      "gender": "Nam",
+      "role": 1
     },
     {
       "id": 3,
       "name": "Nguyễn Anh Tuấn",
       "email": "nguyenanhtuan@gmail.com",
       "password": "12345678",
-      "gender": "Nam"
+      "gender": "Nam",
+      "role": 1
     },
     {
       "id": 4,
       "name": "Bách Thị Phương",
       "email": "bachthiphuong@gmail.com",
       "password": "12345678",
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "role": 1
     },
     {
       "id": 5,
       "name": "Vuong",
       "email": "vuong",
       "password": "12345678",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 0
     },
     {
       "id": 6,
       "name": "Hoan",
       "email": "hoan ",
       "password": "12345678",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 1
     },
     {
       "id": 7,
       "name": "Hoan",
       "email": "hoan",
       "password": "12345678",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 1
     },
     {
       "id": 8,
@@ -61,21 +68,32 @@
       "name": "Khanh",
       "email": "khanh",
       "password": "12345678",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 1
     },
     {
       "id": 10,
       "name": "1",
       "email": "1",
       "password": "1",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 1
     },
     {
       "id": 11,
       "name": "Thanh",
       "email": "thanh",
       "password": "12345678",
-      "gender": "Male"
+      "gender": "Male",
+      "role": 1
+    },
+    {
+      "id": 12,
+      "name": "Huy",
+      "email": "huy",
+      "password": "12345678",
+      "gender": "Male",
+      "role": 1
     }
   ],
   "movies": [
