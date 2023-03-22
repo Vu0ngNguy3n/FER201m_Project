@@ -1,20 +1,29 @@
 import './Sidebar.scss'
 import data from '../../json/type.json';
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, userParms } from 'react-router-dom'
 import './Sidebar.scss';
 
-function Sidebar() {
-    const [category, setcategory] = useState(data);
+function Sidebar({ setType }) {
+    const [category, setCategory] = useState(data);
+
+    useEffect(() => {
+        fetch(' http://localhost:8000/type', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        })
+            .then(response => response.json())
+            .then(category => setCategory(category))
+    })
 
     return (
         <div className='sideBar'>
-                <h2>Thể Loại</h2>
-                <hr />
+            <h2>Thể Loại</h2>
+            <hr />
 
             {
                 category?.map((item, index) => (
-                    <div className="categoryItems">
+                    <div className="categoryItems" onClick={() => setType(item.category)}>
                         <li><span>{item?.category}</span></li>
                     </div>
                 ))

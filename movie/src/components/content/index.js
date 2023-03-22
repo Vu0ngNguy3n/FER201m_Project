@@ -1,10 +1,46 @@
 import './Content.scss'
-import movies from "../../json/movie.json"
+import data from "../../json/movie.json"
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { Link, useNavigate, userParms } from 'react-router-dom'
+import CardMovie from '../rightDashboard/CardMovie';
 
-function Content(){
-    return(
+
+function Content({ type }) {
+    const [movies, setMovie] = useState(data);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch(' http://localhost:8000/movies', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        })
+            .then(response => response.json())
+            .then(movies => setMovie(movies))
+    })
+
+    const redirectPage = (id) => {
+        navigate(`/moviedetail/${id}`)
+    }
+
+
+    return (
         <div className='content'>
-            Content
+            <div className='rightDashboard'>
+                {
+
+                    movies?.map((item, index) => (
+                        <div className='card' onClick={() => redirectPage(item.id)}>
+                            <img src={item.imageUrl} />
+                            <div className='cardContent'>
+                                <h4>{item.name}</h4>
+                                <b>Year: {item.year}</b>
+                                <p>Type: {item.type}</p>
+                            </div>
+                        </div>
+                    ))
+
+                }
+            </div>
         </div>
     )
 }
