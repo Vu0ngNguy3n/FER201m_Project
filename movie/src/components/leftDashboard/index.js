@@ -72,7 +72,7 @@ function LeftDashboard() {
               color: "#f9004d",
             }}
           >
-            Add Type <i class="fa-solid fa-plus"></i>
+            <p>Add Type <i class="fa-solid fa-plus"></i></p>
           </li>
         </ul>
       </div>
