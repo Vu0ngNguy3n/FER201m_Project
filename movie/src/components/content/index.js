@@ -1,37 +1,60 @@
 import './Content.scss'
 import data from "../../json/movie.json"
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link, userParms } from 'react-router-dom'
+import { Link, useNavigate, userParms } from 'react-router-dom'
+import CardMovie from '../rightDashboard/CardMovie';
 
 
 function Content({ type }) {
     const [movies, setMovie] = useState(data);
+    const navigate = useNavigate();
+    const [searchMovie, setSearchMovie] = useState(movies);
 
     useEffect(() => {
-        fetch(' http://localhost:8000/movies', {
+        fetch('http://localhost:8000/movies', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         })
             .then(response => response.json())
             .then(movies => setMovie(movies))
-    })
+
+    },[])
+
+    useEffect(() => {
+        setSearchMovie(movies)
+    }, [movies])
+
+
+    useEffect(() => {
+        if(type !== undefined){
+            const filterMovies =  movies.filter((movie) => movie.typeID == type);
+            setSearchMovie(filterMovies);
+        }
+    }, [type])
+
+    const redirectPage = (id) => {
+        navigate(`/moviedetail/${id}`)
+    }
 
 
     return (
         <div className='content'>
-            {
+            <div className='rightDashboard'>
+                {
 
-                movies?.map((item, index) => (
-                    <Link key={index} to={`moviedetail/${item.id}`}>
-                        <div className="movieItems" onClick={() => setMovie(item.type == type)}>
-                            <div>
-                                <img src={item?.imageUrl} alt={item.imageUrl} width="auto" height="500px" />
+                    searchMovie?.map((item, index) => (
+                        <div className='card' onClick={() => redirectPage(item.id)} key={index}>
+                            <img src={item.imageUrl} />
+                            <div className='cardContent'>
+                                <h4>{item.name}</h4>
+                                <b>Year: {item.year}</b>
+                                <p>Type: {item.type}</p>
                             </div>
                         </div>
-                    </Link>
-                ))
+                    ))
 
-            }
+                }
+            </div>
         </div>
     )
 }

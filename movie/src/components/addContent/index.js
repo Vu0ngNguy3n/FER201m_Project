@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import "./AddContent.scss";
 
 function AddContent() {
@@ -43,6 +44,7 @@ function AddContent() {
     });
     navigate('/dashboard')
 };
+
 
   return (
     <div className="addContent">
@@ -90,10 +92,11 @@ function AddContent() {
           <input
             value={img}
             onChange={(e) => setImg(e.target.value)}
-            placeholder="Enter  Description..."
+            placeholder="Enter  Image Url..."
           />
         </div>
         <div className="addBtn">
+          <Link to='/dashboard'><button>Back</button></Link>
           <button onClick={handleAdd}>Add Film</button>
         </div>
       </div>

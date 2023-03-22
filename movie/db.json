@@ -62,6 +62,13 @@
       "email": "khanh",
       "password": "12345678",
       "gender": "Male"
+    },
+    {
+      "id": 10,
+      "name": "1",
+      "email": "1",
+      "password": "1",
+      "gender": "Male"
     }
   ],
   "movies": [
@@ -69,7 +76,7 @@
       "id": 1,
       "name": "Vua hải tặc",
       "year": 2022,
-      "type": "Hoạt Hình",
+      "type": "Hoạt hình",
       "typeID": 4,
       "score": 7.65,
       "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.",
@@ -99,7 +106,7 @@
       "id": 4,
       "name": "Naruto",
       "year": 2019,
-      "type": "Hoạt Hình",
+      "type": "Hoạt hình",
       "typeID": 4,
       "score": 9.65,
       "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .",
@@ -120,6 +127,7 @@
       "name": "Avengers",
       "year": "2021",
       "type": "Khoa học - Nghệ thuật",
+      "typeID": 5,
       "score": 0,
       "description": "Bộ phim Avenger",
       "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
@@ -129,6 +137,7 @@
       "name": "50 Sắc Thái",
       "year": "2020",
       "type": "Tình cảm",
+      "typeID": 2,
       "score": 0,
       "description": "Bộ phim tình cảm ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg"
@@ -214,34 +223,27 @@
       "user_id": 1,
       "movie_id": "2",
       "id": 12
-    },
-    {
-      "star": "10",
-      "content": "1",
-      "user_id": 3,
-      "movie_id": "4",
-      "id": 13
     }
   ],
   "type": [
     {
-      "id": "1",
+      "id": 1,
       "category": "Hành động"
     },
     {
-      "id": "2",
+      "id": 2,
       "category": "Tình cảm"
     },
     {
-      "id": "3",
+      "id": 3,
       "category": "Kinh dị"
     },
     {
-      "id": "4",
+      "id": 4,
       "category": "Hoạt hình"
     },
     {
-      "id": "5",
+      "id": 5,
       "category": "Khoa học - Nghệ thuật"
     }
   ]
