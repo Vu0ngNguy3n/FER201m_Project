@@ -194,35 +194,25 @@
       "star": 9
     },
     {
-      "id": 8
-    },
-    {
-      "content": "Đúng là kiệt tác điện ảnh",
-      "user_id": 1,
-      "movie_id": 5,
-      "star": 9,
-      "id": 9
-    },
-    {
-      "content": "Đúng là kiệt tác điện ảnh",
-      "user_id": 1,
-      "movie_id": 5,
-      "star": 9,
-      "id": 10
-    },
-    {
-      "score": "10",
-      "content": "Truyện hay đấy",
-      "user_id": 1,
-      "movie_id": "1",
-      "id": 11
-    },
-    {
-      "content": "Anh em không nên xem",
-      "score": "9",
-      "user_id": 1,
+      "star": "7",
+      "content": "Phim cũng hay.",
+      "user_id": 3,
       "movie_id": "2",
-      "id": 12
+      "id": 13
+    },
+    {
+      "star": "9",
+      "content": "Phim tàm tạm.",
+      "user_id": 1,
+      "movie_id": "6",
+      "id": 14
+    },
+    {
+      "star": "10",
+      "content": "Nếu có thang điểm 100, thì phim là 1000/100.",
+      "user_id": 1,
+      "movie_id": "7",
+      "id": 15
     }
   ],
   "type": [
