@@ -15,15 +15,17 @@ function LeftDashboard() {
   }, []);
 
   const handleAdd = () => {
-    fetch(`http://localhost:8000/type`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newType),
-    });
-    console.log(newType);
-    setType([...type, newType]);
-    setNewType("");
-    setIsAdd(false);
+    const newId = type[type.length-1].id 
+    console.log(newId);
+    // fetch(`http://localhost:8000/type`, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(newType),
+    // });
+
+    // setType([...type, newType]);
+    // setNewType("");
+    // setIsAdd(false);
   };
 
   const handleSet = () => {
@@ -40,7 +42,7 @@ function LeftDashboard() {
         <h5>Thể loại</h5>
         <ul>
           {type.map((t, index) => {
-            return <li key={index}>{t}</li>;
+            return <li key={index}>{t.category}</li>;
           })}
           {isAdd === true ? (
             <li>
