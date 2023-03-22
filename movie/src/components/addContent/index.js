@@ -72,8 +72,8 @@ function AddContent() {
           <select name="type" onChange={(e) => setTypeFilm(e.target.value)}>
             {type.map((t, index) => {
               return (
-                <option value={t} key={index}>
-                  {t}
+                <option value={t.category} key={index}>
+                  {t.category}
                 </option>
               );
             })}
@@ -90,7 +90,6 @@ function AddContent() {
         <div className="addDetail">
           <h5>Image: </h5>
           <input
-            value={img}
             onChange={(e) => setImg(e.target.value)}
             placeholder="Enter  Image Url..."
           />
