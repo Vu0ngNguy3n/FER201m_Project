@@ -12,6 +12,12 @@ function Details() {
 	const { account } = useContext(AccountContext);
 	const [accounts, setAccounts] = useState()
 
+	let setView = {}
+
+	if (account === undefined) {
+		setView.display = "none";
+	}
+
 	useEffect(() => {
 		fetch("http://localhost:8000/account")
 			.then(response => response.json())
@@ -35,43 +41,61 @@ function Details() {
 			.then(response => response.json())
 			.then(reviews => {
 				setReviews(reviews)
+				const currentReview = reviews.find(rv => rv.user_id === account.id)
+				setReview(currentReview)
 			})
 
 	}, [id])
 
 	useEffect(() => {
 		const score = reviews.reduce((total, rv) => {
+			console.log(total, rv);
 			return total + parseFloat(rv.star);
 		}, 0)
-		if(reviews.length > 0){
-			const averageScore = score/reviews.length;
-			setMovie({...movie, ['score']: averageScore})
+		if (reviews.length > 0) {
+			const averageScore = score / reviews.length;
+			setMovie({ ...movie, ['score']: averageScore })
 		}
-	}, [reviews, movie])
+
+	}, [reviews])
 
 	const handleChange = (e) => {
 		const { value, name } = e.target;
-
 		setReview(
 			{ ...review, [name]: value }
 		)
 	}
 	const handleAdd = () => {
-		if (reviews.every(rv => rv.user_id !== account.id)) {
-			const newReview = {
-				...review,
-				user_id: 1,
-				movie_id: id
-			}
-			setReviews([...reviews, newReview]);
-			fetch(`http://localhost:8000/reviews`, {
-				method: "POST",
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(newReview)
-			})
-		}else{
-			alert("You only edit this comment")
+		let method = "";
+		let url = ""
+		const newReview = {
+			...review,
+			user_id: account.id,
+			movie_id: id
 		}
+
+		if (review === undefined) {
+			method = "POST"
+			url = ""
+			setReviews([...reviews, newReview]);
+		} else {
+			method = "PUT"
+			url = `/${review.id}`
+			const newReviews = reviews.map(rv => {
+				if (rv.id !== review.id) {
+					return rv
+				} else {
+					return newReview
+				}
+			})
+			setReviews(newReviews)
+		}
+
+		fetch(`http://localhost:8000/reviews${url}`, {
+			method: method,
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(newReview)
+		})
 	}
 
 	return (
@@ -89,8 +113,8 @@ function Details() {
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Điểm đánh giá:</span> {movie.score}</div>
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Mô tả:</span> {movie.description}</div>
 							</div>
-							<hr />
-							<div className='row'>
+							<hr style={setView} />
+							<div className='row' style={setView}>
 								<div className='col-sm-12'>
 									<span>Điểm đánh giá: </span>
 									<input type="text" name="star" value={review?.star || ''} onChange={handleChange} />

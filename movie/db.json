@@ -113,11 +113,11 @@
       "star": 9
     },
     {
-      "id": 2,
-      "content": "Phim dở ẹc",
-      "user_id": 1,
-      "movie_id": 2,
-      "star": 3
+      "star": "10",
+      "content": "123",
+      "user_id": 8,
+      "movie_id": "2",
+      "id": 2
     },
     {
       "id": 3,
@@ -169,7 +169,7 @@
       "id": 10
     },
     {
-      "score": "10",
+      "star": "10",
       "content": "Truyện hay đấy",
       "user_id": 1,
       "movie_id": "1",
@@ -177,29 +177,52 @@
     },
     {
       "content": "Anh em không nên xem",
-      "score": "9",
+      "star": "9",
       "user_id": 2,
       "movie_id": "2",
       "id": 12
     },
     {
-      "score": "10",
-      "content": "123",
-      "user_id": 1,
-      "movie_id": "3",
-      "id": 13
-    },
-    {
-      "score": "10",
+      "star": "10",
       "content": "123",
       "user_id": 1,
       "movie_id": "3",
       "id": 14
     },
     {
+      "star": "10",
+      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
+      "user_id": 1,
+      "movie_id": "2",
+      "id": 15
+    },
+    {
+      "star": "10",
+      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
+      "user_id": 1,
+      "movie_id": "2",
+      "id": 16
+    },
+    {
+      "star": "10",
+      "content": "Phim hay lắm, anh em đừng tin bọn kia.",
       "user_id": 8,
       "movie_id": "2",
-      "id": 25
+      "id": 17
+    },
+    {
+      "content": "Phim bình thường ",
+      "star": "9.2",
+      "user_id": 8,
+      "movie_id": "2",
+      "id": 18
+    },
+    {
+      "star": "0",
+      "content": "Hay 12345",
+      "user_id": 8,
+      "movie_id": "3",
+      "id": 19
     }
   ],
   "type": [
