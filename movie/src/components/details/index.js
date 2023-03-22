@@ -27,16 +27,9 @@ function Details() {
 			.then(reviews => {
 				setReviews(reviews)
 			})
+	}, [id])
 
-		// fetch(`http://localhost:8000/reviews`, {
-		// 	method: "POST",
-		// 	headers: { 'Content-Type': 'application/json' },
-		// 	body: JSON.stringify(obj)
-		// })
-		// 	.then(response => response.json())
-		// 	.then(data => console.log(data))
-		// 	.catch(error => console.log(error))
-	}, [])
+	
 
 	const handleChange = (e) => {
 		const { value, name } = e.target;
