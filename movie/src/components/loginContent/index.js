@@ -4,6 +4,7 @@ import accounts from "../../json/account.json";
 import { AccountContext } from "../../App";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function LoginContent() {
   const [mail, setMail] = useState("");
@@ -24,7 +25,6 @@ function LoginContent() {
       });
   }, []);
 
-  
   const handleLogin = () => {
     const account = listAccount.find(
       (a) => a.email === mail && a.password === password
@@ -34,6 +34,7 @@ function LoginContent() {
     } else {
       setAccount(account);
       navigate("/");
+      toast("Login successfully!!");
     }
   };
 
