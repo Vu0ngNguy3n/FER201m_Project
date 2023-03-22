@@ -37,9 +37,9 @@ function App() {
             {account?.role === 0 && (
               <Route path="/editfilm/:id" element={<EditFilm />} />
             )}
-            {/* {account?.role === 0 && ( */}
+            {account?.role === 0 && (
               <Route path="/user" element={<UserManagement />} />
-            {/* )} */}
+            )}
           </Routes>
           <ToastContainer />
         </BrowserRouter>

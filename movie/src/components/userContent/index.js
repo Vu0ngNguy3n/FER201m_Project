@@ -14,13 +14,17 @@ function UserContent(){
     },[])
 
     return(
-        <div className='content'>
-            {users.map(user=> {
-                return(
-                    <UserCard key={user.id} user={user}/>
-                )
-            })}
-        </div>
+       <div className='userInfo'>
+        <h1>Có {users.length} nguời dùng </h1>
+        <hr/>
+            <div className='content'>
+                {users.map(user=> {
+                    return(
+                        <UserCard key={user.id} user={user}/>
+                    )
+                })}
+            </div>
+       </div>
     )
 }
 
