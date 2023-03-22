@@ -5,7 +5,6 @@ function MovieDetail(){
     return(
         <div>
             <Header/>
-            MovieDetail
             <Details />
         </div>
     )

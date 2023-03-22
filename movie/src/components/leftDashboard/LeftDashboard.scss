@@ -1,0 +1,30 @@
+.leftDashboard{
+    margin-top: -20px;
+    padding: 0 40px;
+    width: 20%;
+    min-height: 690px;
+    // border-right: 2px solid  rgba(22, 24, 35, 0.4);
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.3) 2.4px 2.4px 3.2px;
+    // background-image: url('https://i.pinimg.com/736x/ae/d2/5c/aed25c2e7003ccff25ca62e3ec78693b.jpg');
+    // background-size: cover;
+    // background-position: center;
+    hr{
+        background-color: black;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    h3{
+        // color: white;
+        font-size: 2.2rem;
+
+        font-weight: bold;
+        text-align: center;
+        width: 20%;
+        margin-top: 40px;
+        span{
+            color: #f9004d;
+        }
+    }
+
+   
+}

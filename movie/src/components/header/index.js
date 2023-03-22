@@ -1,22 +1,68 @@
-import  './Header.scss'
+import "./Header.scss";
 import { Link } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
+import { AccountContext } from "../../App";
+import { Button } from "bootstrap";
 
 function Header() {
-    return (
-      <header className="header">
-        <div className='left'>
-            <img src="https://w7.pngwing.com/pngs/1011/407/png-transparent-movies-logo-the-film-television-logo.png" />
-            <Link to='/'><h5>Trang chủ</h5></Link>
+  const { account, setAccount } = useContext(AccountContext);
+  const [search, setSearch] = useState("");
+
+  const searchRef = useRef();
+
+  const clearSearch = () => {
+    setSearch("");
+    searchRef.current.focus();
+  };
+
+  return (
+    <div className="contain">
+      <div className="inner">
+        <Link
+          className="logo"
+          style={{ textDecoration: "none", color: "black" }}
+          to="/"
+        >
+          MY <span>FILM</span>
+        </Link>
+        <div className="search">
+          <input
+            onChange={(e) => setSearch(e.target.value)}
+            ref={searchRef}
+            value={search}
+            placeholder="Enter a Film ..."
+          />
+          <button className="clear" onClick={clearSearch}>
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+          <button className="searchbtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-        <div className='right'>
-            <input placeholder='Nhập tên cần tìm'/>
-            <button>Tìm</button>
-            <p>Đăng nhập</p>
-            <p>Đăng kí</p>
-            <p>Đăng xuất</p>
+        <div className="actions">
+          <Link
+            className="action"
+            style={{ textDecoration: "none" }}
+            to="/login"
+            onClick={()=> setAccount(null)}
+          >
+            {!account ? <b>Đăng Nhập</b> : <b>Đăng Xuất</b>}
+          </Link>
+          {!account ? (
+            <Link
+              className="action"
+              style={{ textDecoration: "none" }}
+              to="/register"
+            >
+              <b>Đăng ký</b>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
-      </header>
-    );
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

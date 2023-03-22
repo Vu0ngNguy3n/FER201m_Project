@@ -1,10 +1,12 @@
 import Header from "../../components/header"
+import RegisterContent from "../../components/registerContent"
+
 
 function Register(){
     return(
         <div>
             <Header/>
-            Register
+            <RegisterContent/>
         </div>
     )
 }
