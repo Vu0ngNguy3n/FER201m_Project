@@ -15,7 +15,7 @@ function RightDashboard(){
           <div className="content">
             <div className="rightDashboard">
               {movies.map((movie, index) => {
-                return <CardMovie movie={movie} />;
+                return <CardMovie movie={movie} key={index}/>;
               })}
               <div className="card">
                 <Link to='/addfilm'><img src="https://static.thenounproject.com/png/3322766-200.png" /></Link>

@@ -76,10 +76,10 @@
       "id": 1,
       "name": "Vua hải tặc",
       "year": 2022,
-      "type": "Hoạt Hình",
+      "type": "Hoạt hình",
       "typeID": 4,
       "score": 7.65,
-      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.",
+      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.1",
       "imageUrl": "https://static.tvtropes.org/pmwiki/pub/images/2e5c6d37_566f_4274_b62d_ebf5fcbd0722.png"
     },
     {
@@ -104,13 +104,13 @@
     },
     {
       "id": 4,
-      "name": "Naruto",
-      "year": 2019,
-      "type": "Hoạt Hình",
-      "typeID": 4,
-      "score": 9.65,
-      "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+      "name": "Batman",
+      "year": 2022,
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": 5,
+      "score": 7.65,
+      "description": "Hiệp sĩ bóng tối của thành phố Gotham đụng độ kẻ thù đầu tiên của mình: tên Jocker có bộ mặt thằng hề, một kẻ nguy hiểm đang lên kế hoạch phun khí độc để khiến mọi người đều chết với bộ mặt cười như hắn. Một nữ phóng viên cố gắng tìm cách lần ra dấu vết của Batman và nàng lại rơi vào vòng tay của chàng tỷ phu Bruce Wayne...",
+      "imageUrl": "https://i.pinimg.com/750x/d3/b1/11/d3b111f9ed42550adf9d5b3ef228296d.jpg"
     },
     {
       "id": 5,
@@ -243,6 +243,10 @@
     {
       "id": 5,
       "category": "Khoa học - Nghệ thuật"
+    },
+    {
+      "id": 6,
+      "category": "Anime"
     }
   ]
 }

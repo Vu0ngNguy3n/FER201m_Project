@@ -72,8 +72,8 @@ function AddContent() {
           <select name="type" onChange={(e) => setTypeFilm(e.target.value)}>
             {type.map((t, index) => {
               return (
-                <option value={t} key={index}>
-                  {t}
+                <option value={t.id} key={index}>
+                  {t.category}
                 </option>
               );
             })}

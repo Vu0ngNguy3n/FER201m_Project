@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router'
 import './CardMovie.scss'
 
 function CardMovie({movie}){
+    const navigate = useNavigate()
+
+    const navigateEdit =(id)=>{
+        navigate(`/editfilm/${id}`)
+    }
     return(
         <div className='card'>
-            <img src={movie.imageUrl}/>
+            <img onClick={() => navigateEdit(movie.id)} src={movie.imageUrl}/>
            <div className='cardContent'>
                 <h4>{movie.name}</h4>
                 <b>Year: {movie.year}</b>

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import "./LeftDashboard.scss";
 
 function LeftDashboard() {
   const [type, setType] = useState([]);
   const [newType, setNewType] = useState("");
   const [isAdd, setIsAdd] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(`http://localhost:8000/type`, {
@@ -15,22 +17,29 @@ function LeftDashboard() {
   }, []);
 
   const handleAdd = () => {
-    const newId = type[type.length-1].id 
-    console.log(newId);
-    // fetch(`http://localhost:8000/type`, {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(newType),
-    // });
+    const newId = type[type.length - 1].id + 1;
+    const addType = {
+      id: newId,
+      category: newType,
+    };
+    fetch(`http://localhost:8000/type`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(addType),
+    });
 
-    // setType([...type, newType]);
-    // setNewType("");
-    // setIsAdd(false);
+    setType([...type, addType]);
+    setNewType("");
+    setIsAdd(false);
   };
 
   const handleSet = () => {
     setIsAdd(!isAdd);
   };
+
+  const navigateDashboard =()=>{
+    navigate('/dashboard')
+  }
 
   return (
     <div className="leftDashboard">
@@ -50,7 +59,7 @@ function LeftDashboard() {
                 placeholder="Nhập tên thể loại..."
                 onChange={(e) => setNewType(e.target.value)}
               />{" "}
-              <button onClick={()=>handleAdd()}>Add</button>
+              <button onClick={() => handleAdd()}>Add</button>
             </li>
           ) : (
             ""
@@ -68,7 +77,7 @@ function LeftDashboard() {
         </ul>
       </div>
       <div>
-        <h5>Danh sách phim</h5>
+        <h5 onClick={navigateDashboard}>Danh sách phim</h5>
       </div>
     </div>
   );
