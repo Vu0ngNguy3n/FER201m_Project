@@ -2,6 +2,7 @@ import './Details.scss'
 import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AccountContext } from "../../App";
+import UploadImage from '../uploadImage';
 
 
 function Details() {
@@ -53,7 +54,7 @@ function Details() {
 		}, 0)
 		if (reviews.length > 0) {
 			const averageScore = score / reviews.length;
-			setMovie({ ...movie, ['score']: averageScore })
+			setMovie({ ...movie, score: averageScore })
 		}
 
 	}, [reviews])
@@ -74,7 +75,7 @@ function Details() {
 		}
 		const currentReview = reviews.find(rv => rv.user_id === account.id)
 
-		
+
 		if (currentReview === undefined) {
 			method = "POST"
 			url = ""
@@ -103,6 +104,7 @@ function Details() {
 
 	return (
 		<div className='container'>
+			<UploadImage />
 			<div className='row'>
 				<div className='col-sm-12'>
 					<div className='row'>
