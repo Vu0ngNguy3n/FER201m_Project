@@ -21,7 +21,12 @@ function Sidebar({ setType }) {
       <h2>Thể Loại</h2>
       <hr />
 
-     <ul>
+      <ul>
+        <div className="categoryItems" onClick={() => setType("")}>
+          <li>
+            <span>Tất cả phim</span>
+          </li>
+        </div>
         {category?.map((item, index) => (
           <div className="categoryItems" onClick={() => setType(item.id)}>
             <li>
@@ -29,7 +34,7 @@ function Sidebar({ setType }) {
             </li>
           </div>
         ))}
-     </ul>
+      </ul>
     </div>
   );
 }

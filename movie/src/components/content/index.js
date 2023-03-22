@@ -27,8 +27,14 @@ function Content({ type, search }) {
 
     useEffect(() => {
         if(type !== undefined){
-            const filterMovies =  movies.filter((movie) => movie.typeID == type);
-            setSearchMovie(filterMovies);
+            if(type === ''){
+                setSearchMovie([...movies]);
+            }else{
+                const filterMovies = movies.filter(
+                  (movie) => movie.typeID == type
+                );
+                setSearchMovie(filterMovies);
+            }
         }
     }, [type])
 
