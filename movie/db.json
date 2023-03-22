@@ -48,6 +48,20 @@
       "email": "hoan",
       "password": "12345678",
       "gender": "Male"
+    },
+    {
+      "id": 8,
+      "name": "Quan",
+      "email": "quan",
+      "password": "12345678",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "name": "Khanh",
+      "email": "khanh",
+      "password": "12345678",
+      "gender": "Male"
     }
   ],
   "movies": [
@@ -102,7 +116,22 @@
       "imageUrl": "https://media1.nguoiduatin.vn/media/nguyen-minh-anh/2019/01/28/ndt14.jpg"
     },
     {
-      "id": 6
+      "id": 6,
+      "name": "Avengers",
+      "year": "2021",
+      "type": "Khoa học - Nghệ thuật",
+      "score": 0,
+      "description": "Bộ phim Avenger",
+      "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
+    },
+    {
+      "id": 7,
+      "name": "50 Sắc Thái",
+      "year": "2020",
+      "type": "Tình cảm",
+      "score": 0,
+      "description": "Bộ phim tình cảm ",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg"
     }
   ],
   "reviews": [

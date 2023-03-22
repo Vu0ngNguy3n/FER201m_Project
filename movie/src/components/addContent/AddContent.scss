@@ -1,0 +1,22 @@
+.addContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addCard{
+    // background-image: url('https://i.pinimg.com/originals/37/92/b2/3792b2a3cea51434790bcf35ec990a1d.jpg');
+    // background-position: center;
+    // background-size: cover; 
+    padding:  10px 5%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border-radius: 10px;
+    .addDetail{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+        h5{
+            width: 80px;
+        }
+    }
+}

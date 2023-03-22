@@ -1,13 +1,28 @@
 import './Details.scss'
-import accounts from "../../json/account.json"
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { AccountContext } from "../../App";
+
 
 function Details() {
 	const { id } = useParams()
 	const [movie, setMovie] = useState({})
 	const [reviews, setReviews] = useState([])
 	const [review, setReview] = useState({})
+	const { account } = useContext(AccountContext);
+	const [accounts, setAccounts] = useState()
+
+	let setView = {}
+
+	if (account === undefined) {
+		setView.display = "none";
+	}
+
+	useEffect(() => {
+		fetch("http://localhost:8000/account")
+			.then(response => response.json())
+			.then(data => setAccounts(data))
+	}, [])
 
 	useEffect(() => {
 		fetch(`http://localhost:8000/movies/${id}`, {
@@ -26,35 +41,58 @@ function Details() {
 			.then(response => response.json())
 			.then(reviews => {
 				setReviews(reviews)
+				const currentReview = reviews.find(rv => rv.user_id === account.id)
+				setReview(currentReview)
 			})
 
-		// fetch(`http://localhost:8000/reviews`, {
-		// 	method: "POST",
-		// 	headers: { 'Content-Type': 'application/json' },
-		// 	body: JSON.stringify(obj)
-		// })
-		// 	.then(response => response.json())
-		// 	.then(data => console.log(data))
-		// 	.catch(error => console.log(error))
-	}, [])
+	}, [id])
+
+	useEffect(() => {
+		const score = reviews.reduce((total, rv) => {
+			console.log(total, rv);
+			return total + parseFloat(rv.star);
+		}, 0)
+		if (reviews.length > 0) {
+			const averageScore = score / reviews.length;
+			setMovie({ ...movie, ['score']: averageScore })
+		}
+
+	}, [reviews])
 
 	const handleChange = (e) => {
 		const { value, name } = e.target;
-
 		setReview(
 			{ ...review, [name]: value }
 		)
 	}
-
 	const handleAdd = () => {
+		let method = "";
+		let url = ""
 		const newReview = {
 			...review,
-			user_id: 1,
+			user_id: account.id,
 			movie_id: id
 		}
-		setReviews([...reviews, newReview]);
-		fetch(`http://localhost:8000/reviews`, {
-			method: "POST",
+
+		if (review === undefined) {
+			method = "POST"
+			url = ""
+			setReviews([...reviews, newReview]);
+		} else {
+			method = "PUT"
+			url = `/${review.id}`
+			const newReviews = reviews.map(rv => {
+				if (rv.id !== review.id) {
+					return rv
+				} else {
+					return newReview
+				}
+			})
+			setReviews(newReviews)
+		}
+
+		fetch(`http://localhost:8000/reviews${url}`, {
+			method: method,
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(newReview)
 		})
@@ -75,11 +113,11 @@ function Details() {
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Điểm đánh giá:</span> {movie.score}</div>
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Mô tả:</span> {movie.description}</div>
 							</div>
-							<hr />
-							<div className='row'>
+							<hr style={setView} />
+							<div className='row' style={setView}>
 								<div className='col-sm-12'>
 									<span>Điểm đánh giá: </span>
-									<input type="text" name="score" value={review?.score || ''} onChange={handleChange} />
+									<input type="text" name="star" value={review?.star || ''} onChange={handleChange} />
 								</div>
 								<div className='col-sm-12'>
 									<span>Bình luận:</span>
