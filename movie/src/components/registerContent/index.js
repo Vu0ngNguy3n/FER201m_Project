@@ -36,6 +36,7 @@ function RegisterContent() {
           email: mail,
           password: password,
           gender: gender,
+          role: 1
         };
         fetch(`http://localhost:8000/account`, {
           method: "POST",
