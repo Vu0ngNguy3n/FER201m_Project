@@ -18,7 +18,7 @@ function RightDashboard(){
                 return <CardMovie movie={movie} key={index}/>;
               })}
               <div className="card">
-                <Link to='/addfilm'><img src="https://static.thenounproject.com/png/3322766-200.png" /></Link>
+                <Link to='/addfilm'><img src="https://static.thenounproject.com/png/3322766-200.png" alt={`add film`}/></Link>
                 <div className="cardContent">
                   <h4 style={{ color: "#f9004d" }}>Add New Film</h4>
                 </div>

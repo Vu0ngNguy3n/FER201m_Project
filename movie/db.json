@@ -88,7 +88,7 @@
       "password": "1",
       "gender": "Male",
       "role": 1,
-      "active": false
+      "active": true
     },
     {
       "id": 11,
@@ -116,6 +116,14 @@
       "gender": "Male",
       "role": 1,
       "active": false
+    },
+    {
+      "id": 14,
+      "name": "kemanhnhat",
+      "email": "kehuydiet@gmail.com",
+      "password": "123",
+      "gender": "Female",
+      "role": 1
     }
   ],
   "movies": [
@@ -258,6 +266,16 @@
       "score": 0,
       "description": "Nhà bà Nữ là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Bộ phim do Đỗ Hoàng Vũ, quản lý của Trấn Thành và Hari Won đảm nhận vai trò đồng sản xuất",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679508915/ubsmurmad53dply7y9cv.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Inception",
+      "year": "2010",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": 5,
+      "score": 0,
+      "description": "Inception (tựa tiếng Việt: Kẻ đánh cắp giấc mơ) là một bộ phim điện ảnh hành động khoa học viễn tưởng Mỹ ra mắt năm 2010 do Christopher Nolan đạo diễn kiêm nhà sản xuất và viết kịch bản. Bộ phim có sự góp mặt của dàn diễn viên lớn, bao gồm Leonardo DiCaprio, Elliot Page, Joseph Gordon-Levitt, Marion Cotillard, Ken Watanabe, Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, và Michael Caine. DiCaprio vào vai Dom Cobb, một kẻ cắp chuyên nghiệp chuyên thực hiện các hoạt động gián điệp kinh tế bằng cách xâm nhập vào tiềm thức mục tiêu của anh ta. Cobb được đề nghị thực hiện một nhiệm vụ để chuộc lại cuộc đời cho mình, một nhiệm vụ bất khả thi: \"ý tưởng khởi nguồn\" - cấy ghép ý tưởng của một người vào trong tiềm thức của người khác.",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679530658/iugorwe2vjloelrwasu7.jpg"
     }
   ],
   "reviews": [
@@ -333,7 +351,7 @@
     },
     {
       "star": "10",
-      "content": "Phim Hay vcl",
+      "content": "Phim Hay thật sự",
       "user_id": 5,
       "movie_id": "1",
       "id": 17

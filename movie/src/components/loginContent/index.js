@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import "./LoginContent.scss";
-import accounts from "../../json/account.json";
 import { AccountContext } from "../../App";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
