@@ -38,7 +38,7 @@ function LoginContent() {
       toast("Login successfully!!");
     }else{
       setIsBlock(true)
-      toast('This account is Blocked!!1')
+      toast('This account is Blocked!!')
     }
   };
 

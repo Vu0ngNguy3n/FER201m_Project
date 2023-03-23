@@ -145,7 +145,7 @@
       "year": 2020,
       "type": "Hành động",
       "typeID": 1,
-      "score": "3.0",
+      "score": "6.5",
       "description": "Sát thủ John Wick: Phần 3 – Chuẩn bị chiến tranh là một bộ phim hành động tội phạm Mỹ năm 2019, với sự tham gia diễn xuất của Keanu Reeves trong vai nhân vật chính trong phần ba của loạt phim Sát thủ John Wick, sau Sát thủ John Wick và Sát thủ John Wick: Phần 2.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg",
       "filmUrl": "https://short.ink/JS6WO2Mm8"
@@ -347,6 +347,17 @@
       "description": "Dựa trên giai thoại về hai đệ nhất mỹ nhân Sài thành Ba Trà & Tư Nhị, Minh Hằng & Ngọc Trinh mang về doanh thu hơn 120 tỷ đồng, á quân phòng vé ba tuần liên tiếp trên đường đua phim Tết 2023.",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679544569/kmg6dwewqmhf3r5nxivn.jpg",
       "filmUrl": "https://short.ink/h6E6NF6m1"
+    },
+    {
+      "id": 23,
+      "name": "Big Mouth",
+      "year": "2022",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": "5",
+      "score": "N/A",
+      "description": "Big Mouth là bộ phim truyền hình Hàn Quốc với sự tham gia của Lee Jong-suk, Im Yoon-ah và Kim Joo-Hun",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679553652/c3oaxt3sghfgnmiwsqea.jpg",
+      "filmUrl": "https://short.ink/h6E6NF6m1"
     }
   ],
   "reviews": [
@@ -454,6 +465,13 @@
       "user_id": 5,
       "movie_id": "20",
       "id": 21
+    },
+    {
+      "content": "hello",
+      "star": "10",
+      "user_id": 5,
+      "movie_id": "2",
+      "id": 22
     }
   ],
   "type": [

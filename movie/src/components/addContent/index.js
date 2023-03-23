@@ -12,6 +12,7 @@ function AddContent() {
   const [type, setType] = useState([]);
   const [typeID, setTypeID] = useState(1);
   const [film, setFilm] = useState([]);
+  const [movieUrl, setMovieUrl] = useState('')
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,6 +54,7 @@ function AddContent() {
             score: "N/A",
             description: description,
             imageUrl: data.url,
+            filmUrl: movieUrl
           };
           fetch(`http://localhost:8000/movies`, {
             method: "POST",
@@ -116,6 +118,10 @@ function AddContent() {
         <div className="addDetail">
           <h5>Image: </h5>
           <input type="file" onChange={(e) => setImg(e.target.files[0])} />
+        </div>
+        <div className="addDetail">
+          <h5>Movie Url: </h5>
+          <input type="text" onChange={(e) => setMovieUrl(e.target.value)} />
         </div>
         <div className="addBtn">
           <Link to="/dashboard">
