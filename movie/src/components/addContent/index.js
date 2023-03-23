@@ -50,7 +50,7 @@ function AddContent() {
           year: year,
           type: newTypeName,
           typeID: typeID,
-          score: 0,
+          score: -1,
           description: description,
           imageUrl: data.url,
         };
