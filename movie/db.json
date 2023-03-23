@@ -183,7 +183,7 @@
       "year": "2021",
       "type": "Khoa học - Nghệ thuật",
       "typeID": 4,
-      "score": 9,
+      "score": 8.5,
       "description": "Bộ phim Avenger",
       "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
     },
@@ -369,6 +369,13 @@
       "user_id": 5,
       "movie_id": "17",
       "id": 19
+    },
+    {
+      "star": "8",
+      "content": "Phim ổn đấy.",
+      "user_id": 2,
+      "movie_id": "6",
+      "id": 20
     }
   ],
   "type": [
