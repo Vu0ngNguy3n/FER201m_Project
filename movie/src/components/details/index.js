@@ -53,7 +53,14 @@ function Details() {
 		}, 0)
 		if (reviews.length > 0) {
 			const averageScore = score / reviews.length;
-			setMovie({ ...movie, score: averageScore })
+			const editMovie = {...movie, score: averageScore}
+			setMovie(editMovie);
+			
+			fetch(`http://localhost:8000/movies/${movie.id}`, {
+				method: "PUT",
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(editMovie)
+			})
 		}
 
 	}, [reviews])
