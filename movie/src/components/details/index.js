@@ -47,14 +47,21 @@ function Details() {
 	}, [id])
 
 	useEffect(() => {
-		const score = reviews.reduce((total, rv) => {
-			return total + parseFloat(rv.star);
-		}, 0)
 		if (reviews.length > 0) {
+			const score = reviews.reduce((total, rv) => {
+				return total + parseFloat(rv.star);
+			}, 0)
 			const averageScore = (Math.round(score / reviews.length * 100) / 100).toFixed(1);;
-			const editMovie = {...movie, score: averageScore}
+			const editMovie = { ...movie, score: averageScore }
 			setMovie(editMovie);
-			
+			fetch(`http://localhost:8000/movies/${movie.id}`, {
+				method: "PUT",
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(editMovie)
+			})
+		}else{
+			const editMovie = { ...movie, score: 'N/A' }
+			setMovie(editMovie);
 			fetch(`http://localhost:8000/movies/${movie.id}`, {
 				method: "PUT",
 				headers: { 'Content-Type': 'application/json' },
@@ -120,9 +127,9 @@ function Details() {
 
 	const checkFloat = (number) => {
 		const numberFloat = parseFloat(number)
-		if(!isNaN(numberFloat) && typeof(numberFloat) === 'number' && numberFloat >= 0 && numberFloat <= 10){
+		if (!isNaN(numberFloat) && typeof (numberFloat) === 'number' && numberFloat >= 0 && numberFloat <= 10) {
 			return true;
-		}else{
+		} else {
 			alert("Điểm đánh giá phải từ 0 đến 10");
 			return false;
 		}
@@ -134,7 +141,7 @@ function Details() {
 				<div className='col-sm-12'>
 					<div className='row'>
 						<div className='col-sm-4'>
-							<img src={movie.imageUrl} alt={movie.name} width="auto" height="500px" style={{maxWidth: "370px"}} />
+							<img src={movie.imageUrl} alt={movie.name} width="auto" height="500px" style={{ maxWidth: "370px" }} />
 						</div>
 						<div className='col-sm-8'>
 							<div className='row'>

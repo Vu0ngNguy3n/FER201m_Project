@@ -214,7 +214,7 @@
       "year": "2020",
       "type": "Khoa học - Nghệ thuật",
       "typeID": "5",
-      "score": 0,
+      "score": "N/A",
       "description": "Người nhện là một siêu anh hùng hư cấu trong các truyện tranh xuất bản bởi Marvel Comics. Nhân vật này được sáng tạo bởi nhà văn Stan Lee và nhà văn-nghệ sĩ Steve Ditko, lần đầu xuất hiện trong Amazing Fantasy",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679501630/gevgdefjsfq2ic9xcbkg.jpg"
     },
@@ -224,7 +224,7 @@
       "year": "2019",
       "type": "Khoa học - Nghệ thuật",
       "typeID": "5",
-      "score": 0,
+      "score": "N/A",
       "description": "Captain America là một siêu anh hùng hư cấu xuất hiện trong truyện tranh của Hoa Kỳ được xuất bản bởi Marvel Comics. Được tạo bởi họa sĩ truyện tranh Joe Simon và Jack Kirby, nhân vật lần đầu tiên xuất hiện trong Captain America Comics",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679502646/nvcekrzqbbcsavgljlqu.jpg"
     },
@@ -234,7 +234,7 @@
       "year": "2020",
       "type": "Khoa học - Nghệ thuật",
       "typeID": "5",
-      "score": 0,
+      "score": "N/A",
       "description": "Một bộ phim điện ảnh đề tài siêu anh hùng của Mỹ năm 2008 dựa trên nhân vật truyện tranh cùng tên của Marvel Comics",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679502771/lfdvnrxfkipvyv1gftoj.jpg"
     },
@@ -244,7 +244,7 @@
       "year": "2000",
       "type": "Hoạt hình",
       "typeID": "4",
-      "score": 0,
+      "score": "N/A",
       "description": "Tom và Jerry là một series phim hoạt hình của Mỹ được chiếu trên truyền hình và rạp hát với nhiều thể loại từ phim ngắn cho tới phim dài.",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679505385/sml2b3fnwrgtnqge3hjl.jpg"
     },
@@ -254,7 +254,7 @@
       "year": "2017",
       "type": "Khoa học - Nghệ thuật",
       "typeID": "5",
-      "score": 0,
+      "score": "N/A",
       "description": "Người khổng lồ xanh",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679505465/obd99pjql0gv3afey7zj.jpg"
     },
@@ -264,7 +264,7 @@
       "year": "2023",
       "type": "Tình cảm",
       "typeID": "2",
-      "score": 0,
+      "score": "N/A",
       "description": "Nhà bà Nữ là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Bộ phim do Đỗ Hoàng Vũ, quản lý của Trấn Thành và Hari Won đảm nhận vai trò đồng sản xuất",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679508915/ubsmurmad53dply7y9cv.jpg"
     },
@@ -284,7 +284,7 @@
       "year": "2019",
       "type": "Hoạt hình",
       "typeID": "4",
-      "score": 0,
+      "score": "N/A",
       "description": "Mèo Oggy và những chú gián tinh nghịch là một bộ phim hoạt hình của Pháp được phối hợp sản xuất bởi hai hãng phim Gaumont và Xilam",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679542401/tv1vcnqyo7lnsremcyur.jpg"
     },
@@ -294,9 +294,19 @@
       "year": "2018",
       "type": "Anime",
       "typeID": "6",
-      "score": 0,
+      "score": "N/A",
       "description": "Đấu phá thương khung là một bộ phim truyền hình Trung Quốc năm 2018, được chuyển thể từ tiểu thuyết cùng tên của nhà văn Thiên Tầm Thổ Đậu. ",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679542495/k1tfylov7pgcxi3zosl6.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Ở nhà một mình",
+      "year": "1990",
+      "type": "Hành động",
+      "typeID": 1,
+      "score": "8.0",
+      "description": "Ở nhà một mình là một bộ phim hài của Mỹ sản xuất vào năm 1990 kể về cậu bé Kevin bị gia đình bỏ rơi khi đi nghỉ Noel chỉ vì mâu thuẫn với mẹ cậu. Trong thời gian này, cậu rất vui vẻ nhưng bị vướng rắc rối với hai tên trộm. Sau đó cậu ra kế hoạch đặt bẫy và cho chúng bài học.",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679543852/yro54u4ucmgb1zraxbad.jpg"
     }
   ],
   "reviews": [
@@ -397,6 +407,13 @@
       "user_id": 2,
       "movie_id": "6",
       "id": 20
+    },
+    {
+      "star": "8",
+      "content": "Tội hai tên trộm quá, nhân vật chính ác thật.",
+      "user_id": 5,
+      "movie_id": "20",
+      "id": 21
     }
   ],
   "type": [
