@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import "./LeftDashboard.scss";
 
 function LeftDashboard() {
@@ -31,6 +32,7 @@ function LeftDashboard() {
     setType([...type, addType]);
     setNewType("");
     setIsAdd(false);
+    toast(`Thêm thể loại ${newType} thành công!!`)
   };
 
   const handleSet = () => {
