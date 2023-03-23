@@ -38,10 +38,10 @@ function LeftDashboard() {
   };
 
   const navigateDashboard =()=>{
-    navigate('/dashboard')
+    navigate('/admin/dashboard')
   }
   const navigateUser = () => {
-    navigate('/user')
+    navigate('/admin/user')
   }
 
   return (

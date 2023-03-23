@@ -29,16 +29,16 @@ function App() {
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
             <Route path="*" element={<Page404 />} />
             {account?.role === 0 && (
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/admin/dashboard" element={<Dashboard />} />
             )}
             {account?.role === 0 && (
-              <Route path="/addfilm" element={<AddFilm />} />
+              <Route path="/admin/addfilm" element={<AddFilm />} />
             )}
             {account?.role === 0 && (
-              <Route path="/editfilm/:id" element={<EditFilm />} />
+              <Route path="/admin/editfilm/:id" element={<EditFilm />} />
             )}
             {account?.role === 0 && (
-              <Route path="/user" element={<UserManagement />} />
+              <Route path="/admin/user" element={<UserManagement />} />
             )}
           </Routes>
           <ToastContainer />

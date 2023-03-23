@@ -5,7 +5,7 @@ function CardMovie({movie}){
     const navigate = useNavigate()
 
     const navigateEdit =(id)=>{
-        navigate(`/editfilm/${id}`)
+        navigate(`/admin/editfilm/${id}`)
     }
     return(
         <div className='card'>

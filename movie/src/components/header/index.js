@@ -11,6 +11,7 @@ function Header({setSearch, search}) {
   const clearSearch = () => {
     setSearch("");
   };
+  const pathname = window.location.pathname;
 
   return (
     <div className="contain">
@@ -22,7 +23,7 @@ function Header({setSearch, search}) {
         >
           MY <span>FILM</span>
         </Link>
-        <div className="search">
+        <div className="search" style={{display: pathname.includes('admin')?'none':''}}>
           <input
             onChange={(e) => setSearch(e.target.value)}
             value={search || ""}
@@ -41,7 +42,7 @@ function Header({setSearch, search}) {
             <Link
               className="action"
               style={{ textDecoration: "none" }}
-              to="/dashboard"
+              to="/admin/dashboard"
             >
               <b>Dashboard</b>
             </Link>
