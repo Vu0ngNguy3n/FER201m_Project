@@ -97,7 +97,7 @@
       "password": "12345678",
       "gender": "Male",
       "role": 1,
-      "active": true
+      "active": false
     },
     {
       "id": 12,
@@ -165,7 +165,7 @@
       "type": "Hoạt hình",
       "typeID": 4,
       "score": "8.5",
-      "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .",
+      "description": "Naruto là một bộ truyện tranh Nhật Bản được viết và minh họa bởi Masashi Kishimoto. Nó kể về câu chuyện của Naruto Uzumaki, một ninja trẻ tìm kiếm sự công nhận từ các đồng nghiệp của mình và ước mơ trở thành Hokage, người đứng đầu ngôi làng của mình .1",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
     },
     {
@@ -205,7 +205,7 @@
       "type": "Hoạt hình",
       "typeID": 4,
       "score": 0,
-      "description": "Hàng xóm của tôi là Totoro là một phim hoạt hình Nhật Bản được hãng Ghibli sản xuất vào năm 1988, vua hoạt hình của Nhật Bản Miyazaki Hayao viết kịch bản và đạo diễn.",
+      "description": "Hàng xóm của tôi là Totoro là một phim hoạt hình Nhật Bản được hãng Ghibli sản xuất vào năm 1988, vua hoạt hình của Nhật Bản Miyazaki Hayao viết kịch bản và1 đạo diễn.",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679499606/rn205sdvumsk1nxqrpnb.jpg"
     },
     {
@@ -317,6 +317,16 @@
       "score": "N/A",
       "description": "Về nhà đi con là một bộ phim truyền hình được thực hiện bởi Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam do NSƯT Nguyễn Danh Dũng làm đạo diễn",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679544012/u8tdqtjucfkkii2bss0h.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Chị Chị Em Em 2",
+      "year": "2023",
+      "type": "Khoa học - Nghệ thuật",
+      "typeID": "5",
+      "score": "N/A",
+      "description": "Dựa trên giai thoại về hai đệ nhất mỹ nhân Sài thành Ba Trà & Tư Nhị, Minh Hằng & Ngọc Trinh mang về doanh thu hơn 120 tỷ đồng, á quân phòng vé ba tuần liên tiếp trên đường đua phim Tết 2023.",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679544569/kmg6dwewqmhf3r5nxivn.jpg"
     }
   ],
   "reviews": [

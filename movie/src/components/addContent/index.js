@@ -29,44 +29,44 @@ function AddContent() {
   }, []);
 
   const handleAdd = () => {
-    if(name !== '' && year !== '' && description !== ''){
+    if (name !== "" && year !== "" && description !== "") {
       const newId = film[film.length - 1].id + 1;
-    const newTypeAdd = type.find((item) => item.id == typeID);
-    const newTypeName = newTypeAdd.category;
-    const data = new FormData();
-    data.append("file", img);
-    data.append("upload_preset", "wasp8ggh");
-    data.append("cloud_name", "dwrjzyqnw");
+      const newTypeAdd = type.find((item) => item.id == typeID);
+      const newTypeName = newTypeAdd.category;
+      const data = new FormData();
+      data.append("file", img);
+      data.append("upload_preset", "wasp8ggh");
+      data.append("cloud_name", "dwrjzyqnw");
 
-    fetch("https://api.cloudinary.com/v1_1/dwrjzyqnw/image/upload", {
-      method: "post",
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const newMovie = {
-          id: newId,
-          name: name,
-          year: year,
-          type: newTypeName,
-          typeID: typeID,
-          score: 'N/A',
-          description: description,
-          imageUrl: data.url,
-        };
-        fetch(`http://localhost:8000/movies`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newMovie),
-        });
-        navigate("/dashboard");
-        toast(`Add Film ${name} successfully`);
+      fetch("https://api.cloudinary.com/v1_1/dwrjzyqnw/image/upload", {
+        method: "post",
+        body: data,
       })
-      .catch((err) => {
-        console.log(err);
-      });
-    }else{
-      toast('Have Information Blank')
+        .then((res) => res.json())
+        .then((data) => {
+          const newMovie = {
+            id: newId,
+            name: name,
+            year: year,
+            type: newTypeName,
+            typeID: typeID,
+            score: "N/A",
+            description: description,
+            imageUrl: data.url,
+          };
+          fetch(`http://localhost:8000/movies`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newMovie),
+          });
+          navigate("/admin/dashboard");
+          toast(`Add Film ${name} successfully`);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      toast("Have Information Blank");
     }
   };
 

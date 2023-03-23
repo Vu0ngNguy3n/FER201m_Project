@@ -8,7 +8,7 @@ function EditDetail({ id }) {
   const [types, setTypes] = useState([]);
   const [description, setDescription] = useState("");
   const [newType, setNewType] = useState(-1);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:8000/movies`, {
@@ -19,8 +19,8 @@ function EditDetail({ id }) {
         const newId = parseInt(id);
         const newMovie = data.find((item) => item.id === newId);
         setMovie(newMovie);
-        setNewType(newMovie?.typeID)
-        setDescription(newMovie?.description)
+        setNewType(newMovie?.typeID);
+        setDescription(newMovie?.description);
       });
 
     fetch(`http://localhost:8000/type`, {
@@ -31,19 +31,19 @@ function EditDetail({ id }) {
   }, []);
 
   const handleEdit = () => {
-      const newMovie = movie;
-      newMovie.description = description
-      newMovie.typeID = parseInt(newType)
-      const newTypes = types.find(item => item.id == newType)
-      newMovie.type = newTypes.category
-      console.log(newMovie);
-      fetch(`http://localhost:8000/movies/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newMovie)
-      });
-      navigate('/dashboard')
-      toast(`Edit Film ${newMovie.name} successfully!!!`)
+    const newMovie = movie;
+    newMovie.description = description;
+    newMovie.typeID = parseInt(newType);
+    const newTypes = types.find((item) => item.id == newType);
+    newMovie.type = newTypes.category;
+    console.log(newMovie);
+    fetch(`http://localhost:8000/movies/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newMovie),
+    });
+    navigate("/admin/dashboard");
+    toast(`Edit Film ${newMovie.name} successfully!!!`);
   };
 
   return (
@@ -55,13 +55,14 @@ function EditDetail({ id }) {
         <h1>{movie?.name}</h1>
         <div className="typeEdit">
           <h5>Thể loại: </h5>
-          <select name="type" value={newType} onChange={e => setNewType(e.target.value)}>
+          <select
+            name="type"
+            value={newType}
+            onChange={(e) => setNewType(e.target.value)}
+          >
             {types?.map((item) => {
               return (
-                <option
-                  key={item.id}
-                  value={item.id}
-                >
+                <option key={item.id} value={item.id}>
                   {item.category}
                 </option>
               );
@@ -75,9 +76,9 @@ function EditDetail({ id }) {
         <div className="typeEditDescription">
           <h5>Mô tả: </h5>
           <textarea
-          defaultValue={description}
+            defaultValue={description}
             onChange={(e) => {
-              setDescription(e.target.value)
+              setDescription(e.target.value);
             }}
           />
         </div>
