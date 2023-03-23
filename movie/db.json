@@ -123,7 +123,8 @@
       "email": "kehuydiet@gmail.com",
       "password": "123",
       "gender": "Female",
-      "role": 1
+      "role": 1,
+      "active": false
     }
   ],
   "movies": [
@@ -133,7 +134,7 @@
       "year": 2022,
       "type": "Hoạt hình",
       "typeID": 4,
-      "score": "9.5",
+      "score": "9.2",
       "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.1223",
       "imageUrl": "https://static.tvtropes.org/pmwiki/pub/images/2e5c6d37_566f_4274_b62d_ebf5fcbd0722.png"
     },
@@ -273,9 +274,29 @@
       "year": "2010",
       "type": "Khoa học - Nghệ thuật",
       "typeID": 5,
-      "score": 0,
+      "score": "8.0",
       "description": "Inception (tựa tiếng Việt: Kẻ đánh cắp giấc mơ) là một bộ phim điện ảnh hành động khoa học viễn tưởng Mỹ ra mắt năm 2010 do Christopher Nolan đạo diễn kiêm nhà sản xuất và viết kịch bản. Bộ phim có sự góp mặt của dàn diễn viên lớn, bao gồm Leonardo DiCaprio, Elliot Page, Joseph Gordon-Levitt, Marion Cotillard, Ken Watanabe, Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, và Michael Caine. DiCaprio vào vai Dom Cobb, một kẻ cắp chuyên nghiệp chuyên thực hiện các hoạt động gián điệp kinh tế bằng cách xâm nhập vào tiềm thức mục tiêu của anh ta. Cobb được đề nghị thực hiện một nhiệm vụ để chuộc lại cuộc đời cho mình, một nhiệm vụ bất khả thi: \"ý tưởng khởi nguồn\" - cấy ghép ý tưởng của một người vào trong tiềm thức của người khác.",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679530658/iugorwe2vjloelrwasu7.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Mèo Oggy và những chú gián tinh nghịch",
+      "year": "2019",
+      "type": "Hoạt hình",
+      "typeID": "4",
+      "score": 0,
+      "description": "Mèo Oggy và những chú gián tinh nghịch là một bộ phim hoạt hình của Pháp được phối hợp sản xuất bởi hai hãng phim Gaumont và Xilam",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679542401/tv1vcnqyo7lnsremcyur.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Đấu phá thương khung",
+      "year": "2018",
+      "type": "Anime",
+      "typeID": "6",
+      "score": 0,
+      "description": "Đấu phá thương khung là một bộ phim truyền hình Trung Quốc năm 2018, được chuyển thể từ tiểu thuyết cùng tên của nhà văn Thiên Tầm Thổ Đậu. ",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679542495/k1tfylov7pgcxi3zosl6.jpg"
     }
   ],
   "reviews": [
@@ -350,7 +371,7 @@
       "content": "Cũng tạm á!"
     },
     {
-      "star": "10",
+      "star": "9",
       "content": "Phim Hay thật sự",
       "user_id": 5,
       "movie_id": "1",

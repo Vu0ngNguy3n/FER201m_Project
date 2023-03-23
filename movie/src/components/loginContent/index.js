@@ -10,6 +10,7 @@ function LoginContent() {
   const [password, setPassword] = useState("");
   const [listAccount, setListAccount] = useState([]);
   const [isUndifined, setIsUndifined] = useState(null);
+  const [isBlock, setIsBlock] = useState(false)
   const { account, setAccount } = useContext(AccountContext);
   const navigate = useNavigate();
 
@@ -31,10 +32,13 @@ function LoginContent() {
     if (account === undefined) {
       setIsUndifined(false);
       toast('Username or Password is Incorrect!!!')
-    } else {
+    } else if(account.active != false){
       setAccount(account);
       navigate("/");
       toast("Login successfully!!");
+    }else{
+      setIsBlock(true)
+      toast('This account is Blocked!!1')
     }
   };
 
@@ -73,6 +77,11 @@ function LoginContent() {
           ) : (
             ""
           )}
+          {isBlock === true?<p
+              style={{ color: "#f9004d", textAlign: "left", fontSize: "12px" }}
+            >
+              Account is Blocked
+            </p>:''}
           <div className="handle">
             <button onClick={handleLogin}>Đăng nhập</button>
             <a className="remember">Quên mật khẩu</a>
