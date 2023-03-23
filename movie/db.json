@@ -311,37 +311,6 @@
       "star": 9
     },
     {
-      "id": 8
-    },
-    {
-      "content": "Đúng là kiệt tác điện ảnh",
-      "user_id": 1,
-      "movie_id": 5,
-      "star": 9,
-      "id": 9
-    },
-    {
-      "content": "Đúng là kiệt tác điện ảnh",
-      "user_id": 1,
-      "movie_id": 5,
-      "star": 9,
-      "id": 10
-    },
-    {
-      "score": "10",
-      "content": "Truyện hay đấy",
-      "user_id": 1,
-      "movie_id": "1",
-      "id": 11
-    },
-    {
-      "content": "Anh em không nên xem",
-      "score": "9",
-      "user_id": 1,
-      "movie_id": "2",
-      "id": 13
-    },
-    {
       "star": "9",
       "content": "Phim tàm tạm.",
       "user_id": 1,
@@ -368,6 +337,13 @@
       "user_id": 5,
       "movie_id": "1",
       "id": 17
+    },
+    {
+      "star": "10",
+      "content": "Phim ổn đấy chứ.",
+      "user_id": 10,
+      "movie_id": "3",
+      "id": 18
     }
   ],
   "type": [

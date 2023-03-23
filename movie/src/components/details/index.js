@@ -114,10 +114,10 @@ function Details() {
 
 	const checkFloat = (number) => {
 		const numberFloat = parseFloat(number)
-		if(!isNaN(numberFloat) && typeof(numberFloat) === 'number' && numberFloat >= 1 && numberFloat <= 10){
+		if(!isNaN(numberFloat) && typeof(numberFloat) === 'number' && numberFloat >= 0 && numberFloat <= 10){
 			return true;
 		}else{
-			alert("Score must be from 1 - 10");
+			alert("Score must be from 0 - 10");
 			return false;
 		}
 	}
