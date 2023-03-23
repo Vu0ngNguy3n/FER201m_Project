@@ -1,6 +1,6 @@
 import './Details.scss'
 import { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { AccountContext } from "../../App";
 
 
@@ -11,6 +11,7 @@ function Details() {
 	const [review, setReview] = useState({})
 	const { account } = useContext(AccountContext);
 	const [accounts, setAccounts] = useState()
+	const navigate = useNavigate()
 
 	let setView = {}
 	if (account === undefined || account === null) {
@@ -135,6 +136,10 @@ function Details() {
 		}
 	}
 
+	const handleWatch = (id) => {
+		navigate(`/watch/${id}`)
+	}
+
 	return (
 		<div className='container'>
 			<div className='row'>
@@ -149,6 +154,7 @@ function Details() {
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Thể loại: </span>{movie.type}</div>
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Điểm đánh giá:</span> {movie.score}</div>
 								<div className='col-sm-12'><span style={{ fontWeight: 'bold' }}>Mô tả:</span> {movie.description}</div>
+								<button onClick={() => handleWatch(movie.id)}>Xem Phim</button>
 							</div>
 							<hr style={setView} />
 							<div className='row' style={setView}>

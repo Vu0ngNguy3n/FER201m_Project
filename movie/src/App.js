@@ -13,6 +13,7 @@ import UserManagement from './pages/UserManagement/UserManagement'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Page404 from "./pages/404Page/404Page";
+import Watch from "./pages/Watch/Watch";
 export const AccountContext = createContext();
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            <Route path="/watch/:id" element={<Watch/>}/>
             <Route path="*" element={<Page404 />} />
             {account?.role === 0 && (
               <Route path="/admin/dashboard" element={<Dashboard />} />
