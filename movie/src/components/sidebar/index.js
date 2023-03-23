@@ -1,7 +1,6 @@
 import "./Sidebar.scss";
 import data from "../../json/type.json";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link, userParms } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.scss";
 
 function Sidebar({ setType }) {

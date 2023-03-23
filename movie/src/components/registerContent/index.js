@@ -138,7 +138,7 @@ function RegisterContent() {
         </div>
         <div className="rightRegister">
           <h1>Sign Up</h1>
-          <img src="https://i.pinimg.com/736x/ae/d2/5c/aed25c2e7003ccff25ca62e3ec78693b.jpg" />
+          <img src="https://i.pinimg.com/736x/ae/d2/5c/aed25c2e7003ccff25ca62e3ec78693b.jpg" alt="" />
           <h2>Privacy policy {"&"} Term of service</h2>
         </div>
       </div>

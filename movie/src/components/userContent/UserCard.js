@@ -15,7 +15,7 @@ function UserCard({ user }) {
     });
     navigate("/user");
     {
-      user.active == true
+      user.active === true
         ? toast(`Active user ${user.name} successfully!!!`)
         : toast(`Inactive user ${user.name} successfully!!!`);
     }
@@ -29,12 +29,13 @@ function UserCard({ user }) {
             ? "https://i.pinimg.com/236x/13/19/e7/1319e7922faffbfa43034a816126b97d.jpg"
             : "https://i.pinimg.com/originals/91/00/7d/91007d0fe4e7ba58b213051e539dc70c.jpg"
         }
+		alt={user.name}
       />
       <div className="cardContent">
         <h4>{user.name}</h4>
         <b>{user.email}</b>
         <p>Gender: {user.gender} </p>
-        {user.active == true ? (
+        {user.active === true ? (
           <p onClick={handleActive} className="active">
             Active
           </p>

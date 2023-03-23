@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "./AddContent.scss";
 
 function AddContent() {
   const [name, setName] = useState("");
   const [year, setYear] = useState();
-  const [typeFilm, setTypeFilm] = useState("");
   const [description, setDiscription] = useState("");
   const [img, setImg] = useState("");
   const [type, setType] = useState([]);
