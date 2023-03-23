@@ -13,7 +13,6 @@ function Details() {
 	const [accounts, setAccounts] = useState()
 
 	let setView = {}
-	console.log(account);
 	if (account === undefined || account === null) {
 		setView.display = "none";
 	}
@@ -52,7 +51,7 @@ function Details() {
 			return total + parseFloat(rv.star);
 		}, 0)
 		if (reviews.length > 0) {
-			const averageScore = score / reviews.length;
+			const averageScore = (Math.round(score / reviews.length * 100) / 100).toFixed(1);;
 			const editMovie = {...movie, score: averageScore}
 			setMovie(editMovie);
 			
