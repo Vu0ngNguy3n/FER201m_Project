@@ -62,6 +62,7 @@ function Content({ type, search }) {
                                 <h4>{item.name}</h4>
                                 <b>Year: {item.year}</b>
                                 <p>Type: {item.type}</p>
+                                <p>Score: {item.score}</p>
                             </div>
                         </div>
                     ))
