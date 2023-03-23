@@ -174,7 +174,7 @@
       "name": "Avengers",
       "year": "2021",
       "type": "Khoa học - Nghệ thuật",
-      "typeID": 4,
+      "typeID": 5,
       "score": 0,
       "description": "Bộ phim Avenger",
       "imageUrl": "https://i.pinimg.com/736x/f4/80/c6/f480c63fd10300e78c3ffc9c1050bcb8.jpg"
@@ -184,7 +184,7 @@
       "name": "50 Sắc Thái",
       "year": "2020",
       "type": "Tình cảm",
-      "typeID": 3,
+      "typeID": 2,
       "score": 0,
       "description": "Bộ phim tình cảm ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg"
