@@ -13,8 +13,8 @@ function Details() {
 	const [accounts, setAccounts] = useState()
 
 	let setView = {}
-
-	if (account === undefined) {
+	console.log(account);
+	if (account === undefined || account === null) {
 		setView.display = "none";
 	}
 
@@ -112,7 +112,7 @@ function Details() {
 		for (let index = 0; index < param.length; index++) {
 			const element = param[index];
 			if (element === undefined || element.trim() === '') {
-				alert("Field must not be blank.")
+				alert("Bình luận và điểm đánh giá không được để trống.")
 				return false;
 			}
 		}
@@ -124,7 +124,7 @@ function Details() {
 		if(!isNaN(numberFloat) && typeof(numberFloat) === 'number' && numberFloat >= 0 && numberFloat <= 10){
 			return true;
 		}else{
-			alert("Score must be from 0 - 10");
+			alert("Điểm đánh giá phải từ 0 đến 10");
 			return false;
 		}
 	}
