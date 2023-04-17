@@ -134,8 +134,8 @@
       "year": 2022,
       "type": "Hoạt hình",
       "typeID": 4,
-      "score": "9.2",
-      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.1223",
+      "score": "9.5",
+      "description": "One Piece, từng được xuất bản tại Việt Nam dưới tên gọi Đảo Hải Tặc là bộ manga dành cho lứa tuổi thiếu niên của tác giả Oda Eiichiro, được đăng định kì trên tạp chí Weekly Shōnen Jump, ra mắt lần đầu trên ấn bản số 34 vào ngày 19 tháng 7 năm 1997.12231",
       "imageUrl": "https://static.tvtropes.org/pmwiki/pub/images/2e5c6d37_566f_4274_b62d_ebf5fcbd0722.png",
       "filmUrl": "https://short.ink/JS6WO2Mm8"
     },
@@ -199,7 +199,7 @@
       "name": "50 Sắc Thái",
       "year": "2020",
       "type": "Tình cảm",
-      "typeID": 3,
+      "typeID": 2,
       "score": "10.0",
       "description": "Bộ phim tình cảm ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Fifty-Gray-poster.jpg",
@@ -358,6 +358,17 @@
       "description": "Big Mouth là bộ phim truyền hình Hàn Quốc với sự tham gia của Lee Jong-suk, Im Yoon-ah và Kim Joo-Hun",
       "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679553652/c3oaxt3sghfgnmiwsqea.jpg",
       "filmUrl": "https://short.ink/h6E6NF6m1"
+    },
+    {
+      "id": 24,
+      "name": "Trung Dep Zai",
+      "year": "2019",
+      "type": "Hành động",
+      "typeID": 1,
+      "score": "N/A",
+      "description": "Trung",
+      "imageUrl": "http://res.cloudinary.com/dwrjzyqnw/image/upload/v1679559878/nuykaykfxbp4nrnpw81d.jpg",
+      "filmUrl": "https://short.ink/h6E6NF6m1"
     }
   ],
   "reviews": [
@@ -432,7 +443,7 @@
       "content": "Cũng tạm á!"
     },
     {
-      "star": "9",
+      "star": "10",
       "content": "Phim Hay thật sự",
       "user_id": 5,
       "movie_id": "1",
@@ -498,6 +509,14 @@
     {
       "id": 6,
       "category": "Anime"
+    },
+    {
+      "id": 7,
+      "category": "Thieu Nhi"
+    },
+    {
+      "id": 8,
+      "category": "Thể Thao"
     }
   ]
 }

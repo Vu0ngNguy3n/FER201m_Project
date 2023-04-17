@@ -2,6 +2,7 @@ import './Details.scss'
 import { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AccountContext } from "../../App";
+import { toast } from 'react-toastify';
 
 
 function Details() {
@@ -119,7 +120,7 @@ function Details() {
 		for (let index = 0; index < param.length; index++) {
 			const element = param[index];
 			if (element === undefined || element.trim() === '') {
-				alert("Bình luận và điểm đánh giá không được để trống.")
+				toast("Bình luận và điểm đánh giá không được để trống.")
 				return false;
 			}
 		}
@@ -131,7 +132,7 @@ function Details() {
 		if (!isNaN(numberFloat) && typeof (numberFloat) === 'number' && numberFloat >= 0 && numberFloat <= 10) {
 			return true;
 		} else {
-			alert("Điểm đánh giá phải từ 0 đến 10");
+			toast("Điểm đánh giá phải từ 0 đến 10");
 			return false;
 		}
 	}

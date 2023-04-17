@@ -14,11 +14,11 @@ function UserCard({ user }) {
       body: JSON.stringify(newUser),
     });
     navigate("/admin/user");
-    {
+    
       user.active === true
         ? toast(`Active user ${user.name} successfully!!!`)
         : toast(`Inactive user ${user.name} successfully!!!`);
-    }
+    
   };
 
   return (
