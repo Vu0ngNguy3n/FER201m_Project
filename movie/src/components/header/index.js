@@ -5,7 +5,7 @@ import { AccountContext } from "../../App";
 import { toast } from "react-toastify";
 
 
-function Header({setSearch, search}) {
+function Header({ setSearch, search }) {
   const { account, setAccount } = useContext(AccountContext);
 
   const clearSearch = () => {
@@ -23,7 +23,7 @@ function Header({setSearch, search}) {
         >
           MY <span>FILM</span>
         </Link>
-        <div className="search" style={{display: pathname.includes('admin')?'none':''}}>
+        <div className="search" style={{ display: pathname.includes('admin') ? 'none' : '' }}>
           <input
             onChange={(e) => setSearch(e.target.value)}
             value={search || ""}
@@ -63,7 +63,7 @@ function Header({setSearch, search}) {
               toast('Log Out Successfully!!')
             }}
           >
-            {!account ? '': <b>Đăng Xuất</b>}
+            {!account ? '' : <b>Đăng Xuất</b>}
           </Link>
           {!account ? (
             <Link
